@@ -1,0 +1,38 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[font=\small, every node/.style={align=center}]
+  % Circle centers
+  \coordinate (A) at (90:2.4);
+  \coordinate (B) at (210:2.4);
+  \coordinate (C) at (330:2.4);
+
+  % Light fills + outlines (print-friendly)
+  \begin{scope}[blend group=soft light]
+    \fill[black!7] (A) circle (4.2);
+    \fill[black!7] (B) circle (4.2);
+    \fill[black!7] (C) circle (4.2);
+  \end{scope}
+  \draw[semithick] (A) circle (4.2);
+  \draw[semithick] (B) circle (4.2);
+  \draw[semithick] (C) circle (4.2);
+
+  % Pillar labels (short, outside)
+  \node[font=\bfseries] at ($(A)+(90:4.9)$)  {Theory};
+  \node[font=\bfseries] at ($(B)+(210:4.9)$) {Measurement \& modeling};
+  \node[font=\bfseries] at ($(C)+(330:4.9)$) {Governance \& design};
+
+  % Pairwise interfaces = Research Directions 1–3
+  \node[fill=white, inner sep=2pt, text width=3.6cm]
+    at ($(A)!0.50!(B)$) {\textbf{(1) Operational indicators}\\\emph{actionable mechanisms}};
+  \node[fill=white, inner sep=2pt, text width=3.6cm]
+    at ($(A)!0.53!(C)$) {\textbf{(2) Integrative design principles}\\\emph{\& decision rights}};
+  \node[fill=white, inner sep=2pt, text width=3.6cm]
+    at ($(B)!0.50!(C)$) {\textbf{(3) Benchmarks \& early warnings}};
+
+  % Triple overlap = Research Direction 4 + outcome
+  \node[fill=white, inner sep=2pt, text width=4.8cm, font=\bfseries]
+    at ($(A)!0.34!(B)!0.50!(C)$) {Enacted organizational resilience\\\normalsize (4) Comparative \& cumulative evidence};
+\end{tikzpicture}
+\caption{Interfaces that turn “resilience talk” into practice. The three pillars—\textbf{theory}, \textbf{measurement/modeling}, and \textbf{governance/design}—must intersect to move from discussion to enactment. The four research directions align with regions of the diagram: (1) \emph{Operational foundations via behavioral \& computational indicators} (Theory$\cap$Measurement); (2) \emph{Integrative design principles \& decision rights} (Theory$\cap$Governance); (3) \emph{Benchmarks \& early-warning tied to incentives} (Measurement$\cap$Governance); and (4) \emph{Comparative \& cumulative evidence} (Theory$\cap$Measurement$\cap$Governance), which together yield \textbf{enacted organizational resilience}. Single-pillar efforts (not shown) tend to produce rhetoric, metrics theater, or checkbox compliance.}
+\label{fig:venn_research_directions}
+\end{figure}
