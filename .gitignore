@@ -12,3 +12,7 @@ main.fdb_latexmk
 main.log
 main.pdf
 main.run.xml
+
+# Confidential field-study materials (do not commit)
+*Memoire*.pdf
+*Mémoire*.pdf
