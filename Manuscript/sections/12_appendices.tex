@@ -125,51 +125,169 @@ Together, these elements legitimate the review as systematic, replicable, and co
 \section{\MakeUppercase {Empirical Insights from Field Study}}
 \label{appendix:C}
 
-\subsection{Methodology}
+\subsection{Study design and provenance}
 
-To complement the literature review, we draw on empirical material collected in Lorena Rota’s Master’s thesis (2024). Rota is a co-author of this manuscript, ensuring continuity between the thesis research and the present review. The study conducted semi-structured interviews with 18 cybersecurity and risk professionals from Swiss and international organizations. Participants were selected on the basis of their direct responsibility for resilience programs and organizational risk management.\\
+To complement the literature review, we draw on empirical material collected in Lorena Rota's Master's thesis (MAS Information Security, University of Geneva, 2024), conducted under the supervision of Thomas Maillart \autocite{rota2024}. Rota is a co-author of this manuscript, ensuring continuity between the thesis research and the present review. The thesis is not publicly available; this appendix therefore documents the study design, interview protocol, thematic synthesis, and principal conclusions needed to evaluate the field evidence cited in the main text.\\
 \\
-All participants provided informed consent prior to the interviews. To ensure compliance with research ethics standards, the identities of both individuals and organizations were anonymized, and all transcripts were stored securely with access restricted to the research team.\\
+The study employed a qualitative, exploratory design to examine how organizations interpret, govern, and operationalize cyber operational resilience amid evolving regulatory requirements (DORA, NIS2, FINMA operational-resilience guidance, and related frameworks). Its primary aim was to analyze how organizations balance regulatory compliance with the development of authentic operational cyber resilience, and how internal information on past cyber problems is---or is not---used as a lever for strengthening resilience.\\
 \\
-The research protocol followed six explicit steps, adapted from Rota (2024):
+The fieldwork comprised 18 semi-structured interviews with senior cybersecurity and risk professionals, each representing a distinct organization \autocite{rota2024}. Interviews were conducted in English. Participants were recruited for direct responsibility over resilience programs, cyber-risk management, or information-security governance. Aggregated sample characteristics are summarized in Table~\ref{tab:RotaSample}; no individual or organization is named in this review.
+
+\input{figures_and_tables/RotaSample}
+
+\subsection{Research questions and hypotheses}
+
+The thesis investigated how a predominant orientation toward external factors---regulatory frameworks, standards, and cyber threats---relative to internal resources and experience shapes operational cyber resilience strategies in Swiss and international organizations in 2024, and how this orientation varies by sector. Five sub-questions guided the analysis:
 \begin{enumerate}
-    \item \textbf{Definition of objectives:} Align interview objectives with the research questions and theoretical framework.
-    \item \textbf{Selection of participants:} Apply clear inclusion and exclusion criteria to identify relevant experts.
-    \item \textbf{Preparation and invitations:} Develop a detailed interview protocol, obtain informed consent, and ensure secure data management and storage.
-    \item \textbf{Conduct of interviews:} Use validated probing techniques during the semi-structured interviews;
-    record with consent or transcribe directly where recording was not authorized.  
-    \item \textbf{Data analysis:} Apply Braun and Clarke’s systematic thematic analysis \autocite{braun2019thematic}.
-    No qualitative software was used; manual coding was chosen to remain close to the data.  
-    \item \textbf{Conclusions and implications:} Link findings explicitly to raw data, and discuss both study limitations and avenues for further research.\\
+    \item To what extent do organizations prioritize external information (regulatory frameworks, industry standards, threats) over analysis of their own internal experiences when designing operational cyber resilience strategies?
+    \item How do the indirect effects of regulation, including through cybersecurity professionals' prior experience, influence operational resilience practices in directly and indirectly regulated organizations?
+    \item What are the limits of an externally oriented approach to operational cyber resilience, and how does it affect adaptation to organization-specific threats?
+    \item How do technology-sector organizations differ from other sectors in their use of internal data for operational cyber resilience?
+    \item To what extent does cooperation across organizational units influence the effectiveness of operational cyber resilience strategies?
 \end{enumerate}
 
-The interview guide consisted of 19 questions, covering four domains:
+Five hypotheses were tested exploratively:
+\begin{enumerate}
+    \item Financial-sector organizations under strict regulatory oversight show heightened engagement in operational cyber resilience initiatives, reflected in greater board attention and larger compliance-oriented budgets.
+    \item A gap persists between organizations' definitions of operational cyber resilience and those of authorities such as the BIS and FINMA, manifesting as partial definitions, perceptions of rigidity, and neglect of internal environmental factors.
+    \item Most organizations prioritize regulatory compliance and standards over deep analysis of their own cyber resilience posture, under-exploiting lessons from past incidents.
+    \item Even resource-rich organizations struggle to establish a shared understanding of operational cyber resilience and effective cross-departmental collaboration, with siloed structures producing passive, distant management.
+    \item Organizations with closer cross-departmental cooperation demonstrate stronger operational resilience than those maintaining siloed structures.
+\end{enumerate}
 
+The BIS definition of operational resilience was communicated to all participants before interviews as the shared reference point: the ability to deliver critical operations through disruption by identifying and protecting against threats, responding and adapting, recovering, and learning from disruptive events while assuming disruptions will occur \autocite{bcbs2021operational,rota2024}.
+
+\subsection{Methodology}
+
+\subsubsection{Design and sampling}
+
+The study used qualitative semi-structured interviews because they allow open-ended exploration of complex, multidimensional organizational perceptions \autocite{rota2024}. Participants were selected through purposive expert sampling: inclusion required a senior role with direct accountability for cybersecurity governance, operational resilience, or cyber-risk management in an organization operating in Switzerland and/or internationally. Organizations spanned finance, insurance, IT security, professional services, logistics, hospitality, luxury goods, pharma/medtech, and telecommunications, with size ranging from small firms to organizations exceeding 100{,}000 employees. One interviewee represented two organizations; one organization was represented by two interviewees (aggregated in Table~\ref{tab:RotaSample}). No organization or individual is identified here.
+
+\subsubsection{Data collection and ethics}
+
+All participants provided written informed consent; participation was voluntary and withdrawal was permitted at any time. Interviews were conducted face-to-face, online, or in person according to participant availability. With consent, interviews were recorded; where recording was not authorized, notes were taken directly during the session. Identities of individuals and organizations were anonymized; transcripts were stored securely with access restricted to the student researcher and academic supervisor. Data were used solely for academic assessment. Original data were scheduled for secure disposal after thesis assessment (by March 2025), in accordance with UNIGE ethics and privacy guidelines \autocite{rota2024}. Participants could review and comment on the manuscript prior to publication. Quotations reported below are illustrative English paraphrases drawn from the thematic synthesis; they are not attributed to named individuals and do not reproduce verbatim transcript material.
+
+\subsubsection{Analysis procedure}
+
+The research protocol followed six steps \autocite{rota2024}:
+\begin{enumerate}
+    \item \textbf{Definition of objectives:} Align interview objectives with the research questions and theoretical framework.
+    \item \textbf{Selection of participants:} Apply inclusion criteria to identify relevant experts across sectors and organization sizes.
+    \item \textbf{Preparation and invitations:} Develop the interview protocol, obtain informed consent, and ensure secure data management.
+    \item \textbf{Conduct of interviews:} Use validated probing techniques during semi-structured interviews; record with consent or transcribe directly where recording was not authorized.
+    \item \textbf{Data analysis:} Apply Braun and Clarke's systematic thematic analysis \autocite{braun2019thematic}. No qualitative software was used; manual coding was chosen to remain close to the data. Responses to the 19 interview questions were synthesized by cross-cutting themes rather than reported question-by-question.
+    \item \textbf{Conclusions and implications:} Link findings explicitly to raw data, and discuss study limitations and avenues for further research.
+\end{enumerate}
+
+\subsection{Interview protocol}
+
+The English-language interview guide comprised 19 questions organized around BIS operational-resilience terminology. Terms and definitions (operational resilience, cyber resilience strategy, governance, organizational arrangements, testing, continuous improvement) were provided to participants in advance. The questions grouped into four domains:
 \begin{itemize}
-    \item[(a)] how organizations define and interpret resilience,
-    \item[(b)] which frameworks and standards are adopted (e.g., NIST CSF, ISO/IEC 27001, COBIT),
-    \item[(c)] how governance structures allocate responsibility for resilience, and
-    \item[(d)] how learning from incidents and predictive capabilities are pursued in practice.\\
+    \item[(a)] \textbf{Definition and interpretation (Q1--3):} awareness of operational-resilience guidance; familiarity with NIST CSF, ISO/IEC~27001, COBIT, and sector-specific requirements; perceptions of compliance with strict legal requirements versus high-level principles (e.g., DORA versus BIS or FINMA principles).
+    \item[(b)] \textbf{Strategy and governance (Q4--10):} existence and communication of a cyber resilience strategy (CRS) with business objectives translated for operational teams; cyber-resilience leadership bodies; internal role and responsibility frameworks; trade-offs between security (CIA) and operational continuity during crises (including COVID-19); third-party/vendor risk controls; alignment of internal arrangements with CRS objectives.
+    \item[(c)] \textbf{Emerging technology and reporting (Q11--12):} adaptation of resilience strategy to AI and quantum technologies; reporting lines to leadership and board, including automated dashboards and follow-on decisions.
+    \item[(d)] \textbf{Testing, learning, and measurement (Q13--19):} security testing and exercises; leadership review of test results; systematic review of internal and external cyber events; ISAC participation; forward-looking and predictive capabilities; periodic review of SOC ticket history; determination of ticketing data fields; automated case-handling suggestions and workforce optimization from historical ticket data.
 \end{itemize}
+
+The full question list is reproduced below for replicability:
+\begin{enumerate}
+    \item Organization categorization (sector, size, regulatory context).
+    \item Awareness of and familiarity with cyber operational-resilience guidance; use of other frameworks in internal documentation.
+    \item Perceived differences between strict legal compliance and high-level principles; implementation strategies, challenges, and experiences.
+    \item Existence of a CRS with business objectives translated into internal arrangements for operational teams.
+    \item Whether the CRS was issued and communicated by leadership; whether internal documentation was updated accordingly.
+    \item Existence of a cyber-resilience leadership board; topics discussed and follow-up actions for operational teams.
+    \item Internal framework defining roles and responsibilities from identification through recovery and learning, including delegated crisis authority.
+    \item Trade-offs between security (CIA) and operational continuity during recent crises (including COVID-19) and their impact on operational cyber resilience.
+    \item Adjustments to controls and measures in response to third-party/vendor risks.
+    \item Whether cyber-resilience arrangements include objectives aligned with the CRS.
+    \item Adaptation of the resilience strategy to AI and quantum technologies amid rapid technological change.
+    \item Reporting lines (automated or manual) to leadership and typical decisions that follow.
+    \item Types of security tests conducted (vulnerability assessments, penetration testing, scenario-based exercises).
+    \item How leadership reviews test results and adapts strategy, arrangements, and governance.
+    \item Capabilities to systematically review internal and external cyber events; use of events to develop scenarios; ISAC participation and follow-up actions.
+    \item Forward-looking capabilities to preempt or anticipate future threats, risks, and crisis scenarios; participating roles.
+    \item Periodic review of SOC ticket history (workforce and technologies involved); use of reports to optimize workforce.
+    \item Who determines information gathered through the ticketing system; changes over time and reasons.
+    \item Whether ticketing systems suggest case handling from historical data, coordinate across departments, or identify workforce over-/under-utilization.
+\end{enumerate}
 
 \subsection{Results}
-Analysis revealed six recurrent themes. These themes are synthesized in Table~\ref{tab:RotaResult} in ~\ref{sec:Introduction}. Below, we summarize the supporting evidence.
+
+\subsubsection{Six themes for the literature review}
+
+Analysis revealed six recurrent themes, synthesized in Table~\ref{tab:RotaResult} (Section~\ref{sec:Introduction}). Below we summarize supporting evidence from the field study \autocite{rota2024}.
 
 \begin{itemize}
-    \item \textbf{Quantification and Ambiguity.} Organizations struggled to define operational metrics. Resilience was widely invoked but remained fragmented across units. One participant noted: \textit{“We talk about resilience in every committee, but nobody can show me how we measure it.”}
+    \item \textbf{Quantification and Ambiguity.} Organizations invoked resilience across committees and reporting lines, yet struggled to define operational metrics. KPI and dashboard projects were often multi-year and under-resourced relative to board expectations. A recurring pattern was that \textit{``\QuoteQuantAmb{}''}
     
-    \item \textbf{Regulatory Pressure and Compliance-Centered Practice.} Regulatory audits, such as those related to DORA, NIS2, or FINMA Circulars, were central to practice. Several interviewees described resilience efforts as oriented toward maintaining a “license to operate.” As one put it: \textit{“Most of our resilience work is to show auditors we are compliant — not to prepare for real incidents.”}
+    \item \textbf{Regulatory Pressure and Compliance-Centered Practice.} Regulatory audits and operational-resilience requirements (DORA, NIS2, FINMA circulars) structured practice. Several interviewees described resilience investment as oriented toward maintaining a ``license to operate.'' Across the sample, \textit{``\QuoteCompliance{}''}
     
-    \item \textbf{Coordination and Silos.} IT, risk, and compliance departments operated in silos with limited cross-functional collaboration. Respondents emphasized that collaboration often occurred only after incidents: \textit{“We only speak with risk after something happens — not before.”}
+    \item \textbf{Coordination and Silos.} IT, risk, and compliance units often operated with limited cross-functional integration, especially outside incident conditions. Interviewees noted that \textit{``\QuoteSilos{}''}
     
-    \item \textbf{Learning from Incidents.} Post-incident reviews were conducted but rarely institutionalized. Reports were often archived without persistent follow-up, leading to repeated mistakes. One expert observed: \textit{“The same issues resurface again and again because lessons learned are not retained.”}
+    \item \textbf{Learning from Incidents.} Post-incident reviews and crisis experience were acknowledged as important, yet organizations often prioritized external frameworks over institutionalizing lessons from their own events. The synthesis highlighted that \textit{``\QuoteLearning{}''}
     
-    \item \textbf{Human and Cultural Factors.} Expertise, training, and organizational culture played a significant role, with interpretations varying across units. Simulation exercises were valued by many respondents, while others highlighted limits when they were not tightly connected to daily practice: \textit{“Cyber ranges are nice exercises, but unless linked to daily practice, they remain theater.”}
+    \item \textbf{Human and Cultural Factors.} Expertise, training, and organizational culture mattered, but interpretations varied across units. \textit{``\QuoteHuman{}''} Interviewees also noted that \textit{``\QuoteCyberRange{}''}
     
-    \item \textbf{Flexibility–Precision Paradox.} Regulators provided flexible definitions of resilience, yet firms requested precise metrics to justify investments. As an executive explained: \textit{“We are told to be resilient, but no one explains how to measure or prove it.”}\\
+    \item \textbf{Flexibility--Precision Paradox.} Regulators and frameworks provide flexible, principle-based definitions; boards and investment committees nonetheless request precise, auditable indicators. A common tension was that \textit{``\QuoteFlexPrec{}''}
 \end{itemize}
 
-Two concrete practices illustrate these dynamics. First, most organizations adopt established frameworks such as NIST CSF, ISO/IEC 27001, or COBIT, but they adapt them selectively to sectoral requirements rather than applying them as-is. Second, some organizations experiment with using Security Operations Center (SOC) tickets as proxies for resilience indicators, though such practices remain emergent and not standardized. Governance choices also reflect cost and efficiency concerns: rather than creating new resilience committees, most organizations integrate resilience into existing structures, which can dilute accountability.
+Three additional patterns from the thesis synthesis extend these themes and are especially relevant to digital organizational resilience:
+\begin{itemize}
+    \item \textbf{Selective framework adoption.} NIST CSF and ISO/IEC~27001 were the most frequently cited frameworks, followed by COBIT; organizations typically adapted and combined them rather than applying any single standard rigidly. Emerging frameworks (DORA, NIS2, FINMA circulars) were also cited, especially in regulated sectors \autocite{rota2024}.
+    \item \textbf{Governance integration over dedicated structures.} Most firms integrated resilience into existing governance bodies rather than creating dedicated committees---a cost-conscious choice that could dilute accountability and slow perspective change \autocite{rota2024}.
+    \item \textbf{Emergent SOC-based indicators.} Several organizations experimented with SOC ticket histories as proxies for resilience-related activity, yet analysis practices varied widely and rarely connected to workforce optimization or board-level evaluation. Interviewees reported that \textit{``\QuoteSoc{}''}
+\end{itemize}
+
+\subsubsection{Detailed findings by topic}
+
+The thematic synthesis organized responses to all 19 questions into the following topic areas \autocite{rota2024}:
+
+\paragraph{Framework awareness and adoption.}
+Most organizations were familiar with multiple operational-resilience directives. NIST CSF, ISO/IEC~27001, and COBIT were most frequently cited; newer instruments (DORA, NIS2, FINMA circulars) appeared mainly in regulated sectors. Organizations combined and adapted frameworks rather than applying any single standard rigidly, reflecting a view that resilience requires context-specific design rather than checklist compliance alone.
+
+\paragraph{Regulatory implementation.}
+Organizations navigated a mixed landscape of principles and legal requirements. Three recurring implementation challenges overlapped: (i) \emph{resource allocation}---balancing compliance investment against other operational priorities, with boards more readily approving regulatory than non-regulatory resilience spend; (ii) \emph{interpretation}---understanding and correctly applying often ambiguous requirements, with particular difficulty comparing detailed EU regulations (e.g., DORA) to less prescriptive Swiss law; and (iii) \emph{strategic alignment}---harmonizing compliance with commercial objectives. Organizations reported continuous partial revision of internal processes as new regulations (AI Act, Cyber Resilience Act, NIS2) entered force. Some framed compliance investments as strategic, client-trust-building initiatives rather than purely defensive cost.
+
+\paragraph{Cyber resilience strategies.}
+Organizations were transitioning from traditional business continuity and risk management toward broader cyber-resilience postures, driven by regulation and threat evolution. A persistent strategy--operations gap was reported: baseline metrics for boards were sought but multi-year KPI projects often stalled for lack of process-improvement budget; harmonized testing protocols aligned to resilience metrics remained aspirational. Human factors were widely emphasized as foundational. Board engagement varied from regular cyber-resilience attention to ongoing efforts to elevate the topic strategically. Cross-department operationalization remained difficult without clear mandates from leadership.
+
+\paragraph{Governance, roles, and reporting.}
+Resilience responsibilities were typically folded into existing governance structures rather than new dedicated committees, motivated by budget and efficiency considerations but raising questions about specialized expertise versus decision speed. Role-definition projects progressed at varying pace; new dedicated posts were rare---existing roles absorbed new responsibilities. Clear decision authority in crises was recognized as essential but unevenly implemented. Regulated industries (especially finance) reported more structured processes. External partnerships supported continuous monitoring and incident response where internal capacity was limited. Reporting lines to leadership and boards were generally established, with growing use of automated dashboards; however, KPI definition remained difficult because of data quality, system diversity, and uncertain board information needs. Upward reporting was often stronger than constructive downward feedback; crisis reporting used dedicated channels. Test results presented to boards were frequently filtered through CISO perception of committee priorities and tended to emphasize critical issues only.
+
+\paragraph{Testing, exercises, and learning.}
+Testing practices were diverse: penetration tests, automated vulnerability scanning, crisis simulations, table-top exercises, phishing simulations, red-team exercises, bug-bounty programs, and security-by-design integration in software development. Realistic scenario simulation and employee awareness testing were widely valued. Leadership review of test outcomes varied from structured KPI-driven processes to ad-hoc examination; budget constraints often limited follow-through. Many organizations participated in ISACs and engaged national cyber-security centers; threat-intelligence platforms supplemented internal review. Systematic use of internal incident history to develop scenarios was uneven. External sharing was stronger in finance than in less networked sectors.
+
+\paragraph{Crisis experience and third-party risk.}
+COVID-19 and other crises exposed variable preparedness. Some organizations accelerated digital transformation while revealing continuity-plan gaps; others temporarily prioritized availability over strict confidentiality controls, accompanied by formal risk-acceptance procedures. Third-party risk management intensified with new regulatory outsourcing requirements: tiered vendor classification, stronger questionnaires and certifications, direct audits, contract updates with audit rights, joint exercises with critical suppliers, and dedicated third-party risk teams---alongside administrative burden, especially for smaller vendors.
+
+\paragraph{Emerging technology and prospective capabilities.}
+AI integration in products and security operations was active but governed cautiously; quantum computing was recognized as a future concern (chiefly for cryptography) but rarely resourced today. AI-enabled threats drove employee training emphasis. Prospective threat analysis drew on emerging technology monitoring, geopolitical considerations, supply-chain risk, and external intelligence partnerships, but dedicated teams and budgets were uncommon; immediate operational concerns often competed with long-term planning.
+
+\paragraph{Internal data and SOC ticket analysis.}
+Analysis of internal cyber data---including SOC ticket histories---was recognized as potentially valuable but generally under-prioritized relative to compliance. Few organizations systematically reviewed ticket history for workforce optimization; data-quality problems, immature processes, siloed SOC ownership, and heterogeneous systems were common barriers. Ticketing field definitions were often vendor-default or hierarchically determined rather than resilience-driven. Automated case suggestions and cross-department coordination from historical data were largely absent; manual runbooks and predefined procedures predominated. Technology and security-service providers showed greater willingness to invest in advanced analytics. Experts rarely perceived SOC analytics as board-level priorities and seldom requested dedicated budgets, though KPI development for board communication was underway in some organizations.
+
+\subsection{Principal conclusions from the field study}
+
+The thesis synthesis yielded four principal conclusions relevant to this review \autocite{rota2024}:
+\begin{enumerate}
+    \item \textbf{Definition gap.} Practitioners' understanding of operational cyber resilience often diverged from the holistic BIS definition communicated to them, producing partial conceptualizations and uneven operationalization across units.
+    \item \textbf{Regulation as catalyst, compliance as default.} Expanding regulation since the 2008 financial crisis has catalyzed resilience initiatives, but implementation often follows checklist and gap-assessment methods oriented toward literal compliance rather than adaptive capability. Regulatory expansion absorbs resources that might otherwise improve processes or analyze internal posture.
+    \item \textbf{External orientation over internal learning.} Organizations prioritized external frameworks, standards, and threat intelligence over systematic exploitation of their own incident and operational data, limiting organization-specific adaptation despite accumulating internal knowledge.
+    \item \textbf{Cooperation as enabler.} Cross-departmental cooperation---rather than siloed, hierarchical structures---appeared central to translating strategy into operational resilience, yet governance integration into existing bodies and absent leadership mandates often impeded such cooperation.
+\end{enumerate}
+
+\subsection{Limitations}
+
+The field study has limitations that bound interpretation of the evidence cited in this review \autocite{rota2024}:
+\begin{itemize}
+    \item \textbf{Sample size and design.} Eighteen purposively sampled expert interviews provide rich contextual insight but do not support statistical generalization.
+    \item \textbf{Geographic and sector mix.} Although Swiss and international organizations across multiple sectors were included, findings may not transfer uniformly to other regulatory environments or smaller enterprises under-represented in the sample.
+    \item \textbf{Interpretive synthesis.} Thematic analysis involved researcher judgment; manual coding without inter-coder reliability statistics introduces interpretive subjectivity, mitigated by supervisor oversight and explicit linkage of themes to interview content.
+    \item \textbf{Temporal context.} Interviews were conducted in 2024 amid rapid regulatory change (DORA, NIS2, CRA); organizational responses may evolve as implementation matures.
+    \item \textbf{Compliance framing.} Both the regulatory context and parts of the interview protocol emphasized compliance and governance, which may have accentuated externally oriented responses relative to internal learning practices.
+\end{itemize}
 
 \subsection{Summary}
-These empirical insights illustrate how organizations engage with resilience under regulatory and managerial expectations and where they see opportunities to deepen its enactment as an adaptive capability. They surface six recurring tensions that shape the current resilience implementation gap. Table \ref{tab:RotaResult} in Section \ref{sec:Introduction} synthesizes these findings by aligning the themes with their organizational dimensions and implications for practice.
+
+These insights show how organizations engage with resilience under regulatory and managerial pressure---and where enactment as adaptive capability still stalls. They surface six recurring tensions that structure the implementation gap analyzed in Section~\ref{sec:RG}. Table~\ref{tab:RotaResult} aligns each theme with its organizational dimension and practical implication. Because the underlying thesis is not publicly available, this appendix provides the methodological and empirical documentation needed to assess all field-study citations in the main text.
