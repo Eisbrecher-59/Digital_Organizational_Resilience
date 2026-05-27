@@ -57,9 +57,9 @@
 \usepackage{subcaption}
 
 \DefTblrTemplate{firsthead}{default}{}
+\DefTblrTemplate{head}{default}{}
 \DefTblrTemplate{firstfoot}{default}{
   \UseTblrTemplate{contfoot}{default}
-  \UseTblrTemplate{caption}{default}
 }
 \DefTblrTemplate{lastfoot}{default}{
   \UseTblrTemplate{caption}{default}
@@ -148,7 +148,7 @@ As organizations confront increasingly complex digital disruptions, resilience h
 % \setlength{\parskip}{0in} 
 % \hangindent=0.5in 
 % \hangafter=1 
-\printbibliography[heading=none]
+\printbibliography[heading=none,notkeyword=appendix-only]
 
 
 % Appendix
