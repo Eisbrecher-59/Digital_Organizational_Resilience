@@ -3,50 +3,67 @@
 \begin{tikzpicture}[>=Stealth, line width=0.9pt, font=\footnotesize]
 
 % ---- axes ----
-\draw[->,gray!60] (0,0) -- (10.8,0) node[above left=1pt and 0pt,black]{time / successive disruptions};
-\draw[->,gray!60] (0,0) -- (0,5.0) node[above,black,align=center]{adaptive\\capacity};
+\draw[->,gray!60] (0,0) -- (13.2,0) node[above left=1pt and 0pt,black]{time};
+\draw[->,gray!60] (0,0) -- (0,5.2) node[above,black,align=center]{adaptive\\capacity};
 
-% ---- recurring disruption markers ----
-\foreach \x in {3,5,7} {
-  \draw[gray!35,dotted] (\x,0.1) -- (\x,4.6);
-  \node[red!70!black] at (\x,-0.28) {\scriptsize$\downarrow$};
-}
-\node[gray!70,font=\scriptsize] at (3,-0.62) {disruptions};
+% ---- disruptions: live incidents (red) and simulated probes (audit / red-team, gray) ----
+% D1 probe (x=3), D2 incident (x=5.2), D3 probe (x=7.4)
+\foreach \x in {3,5.2,7.4} { \draw[gray!35,dotted] (\x,0.1) -- (\x,4.7); }
+\node[gray!75,font=\scriptsize,align=center] at (3,-0.45)   {audit /\\red-team};
+\node[red!70!black,font=\scriptsize,align=center] at (5.2,-0.45) {live\\incident};
+\node[gray!75,font=\scriptsize,align=center] at (7.4,-0.45) {red-team};
+\node[gray!85,font=\scriptsize] at (3,4.95) {\scriptsize(simulated disruption)};
 
-% ---- point-in-time audit snapshot ----
-\draw[black,dashed] (2.4,0.1) -- (2.4,4.55);
-\node[align=center,font=\scriptsize] at (2.4,4.9) {point-in-time\\audit / certification};
+% disruption markers on the axis
+\node[gray!75] at (3,0.0)   {\scriptsize$\triangledown$};
+\node[red!70!black] at (5.2,0.0) {\scriptsize$\blacktriangledown$};
+\node[gray!75] at (7.4,0.0) {\scriptsize$\triangledown$};
 
-% ---- three trajectories (identical until the audit, then divergent) ----
+% ---- trajectories: all dip at every disruption (real OR simulated); recovery differs ----
+% green: monitoring + systematic learning -> each shock converted into a net gain
 \draw[green!55!black]
-  (2,3)--(3,3)--(3.25,2.1)--(4,3.5)--(5,3.5)--(5.25,2.7)--(6,4.0)--(7,4.0)--(7.25,3.2)--(8,4.5)--(9.4,4.7);
+  (1.8,3)--(3,3)--(3.2,2.3)--(4.0,3.5)--(5.2,3.5)--(5.4,2.8)--(6.2,4.0)--(7.4,4.0)--(7.6,3.3)--(8.4,4.6)--(9.6,4.75);
+% blue: responds to every probe and incident, recovers to baseline, learns nothing lasting
 \draw[blue!45!black]
-  (2,3)--(3,3)--(3.25,2.1)--(4,3.0)--(5,3.0)--(5.25,2.2)--(6,3.0)--(7,3.0)--(7.25,2.2)--(8,3.0)--(9.4,3.0);
+  (1.8,3)--(3,3)--(3.2,2.3)--(4.0,3.0)--(5.2,3.0)--(5.4,2.3)--(6.2,3.0)--(7.4,3.0)--(7.6,2.3)--(8.4,3.0)--(9.6,3.0);
+% red: no learning loop -> each shock leaves less capacity than before
 \draw[red!75!black]
-  (2,3)--(3,3)--(3.25,2.1)--(4,2.6)--(5,2.6)--(5.25,1.7)--(6,2.3)--(7,2.3)--(7.25,1.4)--(8,1.9)--(9.4,1.6);
+  (1.8,3)--(3,3)--(3.2,2.3)--(4.0,2.6)--(5.2,2.6)--(5.4,1.9)--(6.2,2.3)--(7.4,2.3)--(7.6,1.6)--(8.4,1.9)--(9.6,1.6);
 
-% ---- endpoint labels ----
-\node[green!55!black,right,font=\scriptsize] at (9.4,4.7) {stronger};
-\node[blue!45!black,right,font=\scriptsize]  at (9.4,3.0) {unchanged};
-\node[red!75!black,right,font=\scriptsize]   at (9.4,1.6) {more brittle};
+% ---- mechanism annotations on the curves ----
+\node[green!50!black,font=\scriptsize,align=center] at (6.0,4.75) {monitor + learn:\\each probe/incident\\becomes a gain};
+\draw[green!50!black,->] (6.0,4.45) to[bend right=10] (5.7,3.95);
+\node[red!65!black,font=\scriptsize,align=center] at (6.55,1.25) {no learning loop:\\lessons lost,\\capacity erodes};
+\draw[red!65!black,->] (6.55,1.55) to[bend left=10] (6.1,2.25);
 
-% ---- annotation: indistinguishable at the snapshot ----
-\node[align=center,font=\scriptsize] at (1.0,1.35)
-  {at the audit all three\\coincide---resilience vs.\\luck, compliance vs.\\capability look alike};
-\draw[->,gray] (1.0,2.0) -- (2.3,2.93);
+% ---- endpoint labels (outcome) ----
+\node[green!55!black,right,font=\scriptsize] at (9.6,4.75) {stronger};
+\node[blue!45!black,right,font=\scriptsize]  at (9.6,3.0)  {unchanged};
+\node[red!75!black,right,font=\scriptsize]   at (9.6,1.6)  {more brittle};
+
+% ---- early ambiguity note ----
+\node[align=center,font=\scriptsize] at (1.05,1.5)
+  {one probe is\\ambiguous: all three\\dip and recover\\alike at first};
+\draw[->,gray] (1.05,2.15) -- (2.55,2.92);
 
 % ---- brace: longitudinal window ----
 \draw[decorate,decoration={brace,amplitude=5pt,mirror},gray!70]
-  (2.5,-0.95) -- (9.3,-0.95)
+  (2.6,-1.05) -- (9.5,-1.05)
   node[midway,below=4pt,black,font=\scriptsize]
-  {longitudinal tracing: divergence becomes observable};
+  {longitudinal tracing across disruptions: divergence becomes observable};
 
 \end{tikzpicture}
-\caption{\textbf{Why resilience must be traced over time.} At a point-in-time
-audit, organizations following very different trajectories are
-indistinguishable---a single snapshot cannot separate resilience from luck or
-compliance from capability. Only by tracing adaptive capacity across successive
-disruptions does it become observable whether an organization grows stronger,
-returns unchanged, or quietly becomes more brittle.}
+\caption{\textbf{Monitoring and systematic learning are what separate the
+trajectories.} Disruptions are both real (live incidents) and simulated
+(audits, certifications, red-team exercises); all are probes that every
+organization dips under and recovers from, so any single probe is ambiguous.
+What diverges is the recovery: where monitoring feeds a systematic
+post-incident learning loop, each shock is converted into a net gain and
+capacity rises (\emph{stronger}); where organizations respond but institutionalize
+nothing, capacity returns to baseline (\emph{unchanged}); and where no learning loop
+exists, lessons are lost and each shock leaves the organization measurably more
+brittle (\emph{more brittle}). Only tracing this loop across successive disruptions
+makes the difference---and thus resilience versus luck, capability versus
+compliance---observable.}
 \label{fig:trace_vs_snapshot}
 \end{figure}
