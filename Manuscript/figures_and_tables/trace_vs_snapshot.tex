@@ -1,0 +1,52 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[>=Stealth, line width=0.9pt, font=\footnotesize]
+
+% ---- axes ----
+\draw[->,gray!60] (0,0) -- (10.8,0) node[above left=1pt and 0pt,black]{time / successive disruptions};
+\draw[->,gray!60] (0,0) -- (0,5.0) node[above,black,align=center]{adaptive\\capacity};
+
+% ---- recurring disruption markers ----
+\foreach \x in {3,5,7} {
+  \draw[gray!35,dotted] (\x,0.1) -- (\x,4.6);
+  \node[red!70!black] at (\x,-0.28) {\scriptsize$\downarrow$};
+}
+\node[gray!70,font=\scriptsize] at (3,-0.62) {disruptions};
+
+% ---- point-in-time audit snapshot ----
+\draw[black,dashed] (2.4,0.1) -- (2.4,4.55);
+\node[align=center,font=\scriptsize] at (2.4,4.9) {point-in-time\\audit / certification};
+
+% ---- three trajectories (identical until the audit, then divergent) ----
+\draw[green!55!black]
+  (2,3)--(3,3)--(3.25,2.1)--(4,3.5)--(5,3.5)--(5.25,2.7)--(6,4.0)--(7,4.0)--(7.25,3.2)--(8,4.5)--(9.4,4.7);
+\draw[blue!45!black]
+  (2,3)--(3,3)--(3.25,2.1)--(4,3.0)--(5,3.0)--(5.25,2.2)--(6,3.0)--(7,3.0)--(7.25,2.2)--(8,3.0)--(9.4,3.0);
+\draw[red!75!black]
+  (2,3)--(3,3)--(3.25,2.1)--(4,2.6)--(5,2.6)--(5.25,1.7)--(6,2.3)--(7,2.3)--(7.25,1.4)--(8,1.9)--(9.4,1.6);
+
+% ---- endpoint labels ----
+\node[green!55!black,right,font=\scriptsize] at (9.4,4.7) {stronger};
+\node[blue!45!black,right,font=\scriptsize]  at (9.4,3.0) {unchanged};
+\node[red!75!black,right,font=\scriptsize]   at (9.4,1.6) {more brittle};
+
+% ---- annotation: indistinguishable at the snapshot ----
+\node[align=center,font=\scriptsize] at (1.0,1.35)
+  {at the audit all three\\coincide---resilience vs.\\luck, compliance vs.\\capability look alike};
+\draw[->,gray] (1.0,2.0) -- (2.3,2.93);
+
+% ---- brace: longitudinal window ----
+\draw[decorate,decoration={brace,amplitude=5pt,mirror},gray!70]
+  (2.5,-0.95) -- (9.3,-0.95)
+  node[midway,below=4pt,black,font=\scriptsize]
+  {longitudinal tracing: divergence becomes observable};
+
+\end{tikzpicture}
+\caption{\textbf{Why resilience must be traced over time.} At a point-in-time
+audit, organizations following very different trajectories are
+indistinguishable---a single snapshot cannot separate resilience from luck or
+compliance from capability. Only by tracing adaptive capacity across successive
+disruptions does it become observable whether an organization grows stronger,
+returns unchanged, or quietly becomes more brittle.}
+\label{fig:trace_vs_snapshot}
+\end{figure}
