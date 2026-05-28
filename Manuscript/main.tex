@@ -26,6 +26,9 @@
 \usepackage{csquotes}
 \usepackage[style=apa,backend=biber]{biblatex}
 \addbibresource{references.bib}
+% Preserve source order of keys within a multi-citation (chronological),
+% overriding the apa style's default alphabetical sortcites.
+\ExecuteBibliographyOptions{sortcites=false}
 \usepackage{hyperref}
 
 % Table
