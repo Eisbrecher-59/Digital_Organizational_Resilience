@@ -4752,4 +4752,82 @@
     <bcf:citekey order="1723">majchrzak2016designing</bcf:citekey>
     <bcf:citekey order="1724">alexander2013resilience</bcf:citekey>
     <bcf:citekey order="1725">strogatz2018nonlinear</bcf:citekey>
-    <bcf:citeke
+    <bcf:citekey order="1726">astrom2021feedback</bcf:citekey>
+    <bcf:citekey order="1727">callister2020materials</bcf:citekey>
+    <bcf:citekey order="1728">astrom2008feedback</bcf:citekey>
+    <bcf:citekey order="1729">norris2007community</bcf:citekey>
+    <bcf:citekey order="1730">newman2018networks</bcf:citekey>
+    <bcf:citekey order="1731">peng2015invulnerability</bcf:citekey>
+    <bcf:citekey order="1732">walpole1998probability</bcf:citekey>
+    <bcf:citekey order="1733">aldrich2015social</bcf:citekey>
+    <bcf:citekey order="1734">almassalkhi2015modelpredictive</bcf:citekey>
+    <bcf:citekey order="1735">aldrich2014social</bcf:citekey>
+    <bcf:citekey order="1736">wangersky1978lotka</bcf:citekey>
+    <bcf:citekey order="1737">marconi2008fluctuation</bcf:citekey>
+    <bcf:citekey order="1738">pelorosso2017low</bcf:citekey>
+    <bcf:citekey order="1739">hill1949families</bcf:citekey>
+    <bcf:citekey order="1740">antonovsky1971twentyfive</bcf:citekey>
+    <bcf:citekey order="1741">werner1995resilience</bcf:citekey>
+    <bcf:citekey order="1742">walsh1996concept</bcf:citekey>
+    <bcf:citekey order="1743">kleitman2022applying</bcf:citekey>
+    <bcf:citekey order="1744">webster2002analyzing</bcf:citekey>
+    <bcf:citekey order="1745">vomBrocke2009</bcf:citekey>
+    <bcf:citekey order="1746">vombrocke2015standing</bcf:citekey>
+    <bcf:citekey order="1747">maillart2024computational</bcf:citekey>
+    <bcf:citekey order="1748">berkes1998linking</bcf:citekey>
+    <bcf:citekey order="1749">leslie2013response</bcf:citekey>
+    <bcf:citekey order="1750">gibbs2013beyond</bcf:citekey>
+    <bcf:citekey order="1751">he2022building</bcf:citekey>
+    <bcf:citekey order="1752">braun2019thematic</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="apa">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="5">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">pubstate</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+      <bcf:sortitem literal="1" order="3">-2000000000</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1">month</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">-2000000000</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="7">
+      <bcf:sortitem order="1">day</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">-2000000000</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="8">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="9">
+      <bcf:sortitem order="1">volume</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="apa/global//global/global"
+                type="entry"
+                sortingtemplatename="apa"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>
