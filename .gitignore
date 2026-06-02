@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 cat <<EOF > 
 .gitignore
+=======
+>>>>>>> 5962c492beeeeff7385c8b177888710a79b39489
 *.aux
 *.log
 *.out
@@ -9,6 +12,7 @@ cat <<EOF >
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+<<<<<<< HEAD
 /Submission
 EOF
 
@@ -21,3 +25,15 @@ EOF
 *.lot
 *.lof
 %OUTDIR%/
+=======
+main.blg
+main.fdb_latexmk
+main.log
+main.pdf
+main.run.xml
+
+# Confidential field-study materials (do not commit)
+*Memoire*.pdf
+*Mémoire*.pdf
+MISQ_Submission_comments_*.pdf
+>>>>>>> 5962c492beeeeff7385c8b177888710a79b39489

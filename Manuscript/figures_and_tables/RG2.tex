@@ -2,35 +2,41 @@
 \newgeometry{top=.15cm, bottom=2cm, left=2.3cm, right=2.3cm}
 \singlespacing
 \begin{landscape}
-\tiny
+\footnotesize
 \begin{longtblr}[
-  caption = {\textbf{Classification of Resilience-related Publications.} This table provides the classification of 89 relevant, impactful and supporting publications associated with resilience according to their corresponding topic/-s and used methodology/-ies. This table allows to extract the key research gaps, where no publication was found (red cells) or only very few (orange cell). Topic-methodology intersections in grey show other research that are less relevant for this research.},
+  caption = {\textbf{Classification of resilience research by method and coordination scope.} Rows enumerate methodological approaches found across the reviewed literature; columns locate each approach at the three coordination scopes that frame the paper (Figure~\ref{fig:enactment_scope}). Cell contents list representative publications. \textbf{Orange cells} mark research gaps: intersections where simulation, network-analytic, and trace-based methods remain sparse despite their potential to evidence adaptive performance at organizational and ecosystem scopes -- the methodological-fragmentation pattern diagnosed in Section~\ref{sec:RG} and addressed by the measurement agenda in Section~\ref{sec:RD}. A discipline-by-method classification of the full corpus is preserved in Appendix~\ref{appendix:B} (Table~\ref{tab:ResearchGapsLegacy}). Individual-level psychometric work cited in Section~\ref{sec:Background} is reviewed separately and is not represented here, as it lies outside the socio-technical scope of the Enactment--Scope framework.},
   label = {tab:ResearchGaps}
 ]{
   width=\linewidth,
-  colspec={|Q[1.5cm] Q[1.7cm]|Q[2.6cm] Q[2.6cm] Q[2.6cm] Q[2.6cm] Q[2.6cm] Q[2.6cm] Q[2.6cm]|},
-  rowhead = 2,
+  colspec={|Q[2.6cm,c,m]|Q[6.5cm,l,t]|Q[6.5cm,l,t]|Q[6.5cm,l,t]|},
+  rowhead = 1,
   hlines, vlines
 }
-\SetCell[r=2, c = 2]{l} \vspace{2em}\par \textit{Topics}& & \SetCell[r = 1, c = 7]{halign = l}{\textit{Methodologies}} \\
-& & \textbf{\makecell{Simulation \\ \& \\ Modeling}} & \textbf{\makecell{Network \\ Analysis}} & \textbf{\makecell{Markers \\ \& \\ Metrics}} & \textbf{\makecell{Technology}} & \textbf{\makecell{Case Studies}} & \textbf{\makecell{Longitudinal \\ Studies}} & \textbf{\makecell{Surveys}} \\
-\hline
-% === Example block start ===
-\SetCell[r=1, c=2]{l}{\textbf{\makecell{Complex Adaptive Systems}}} & &  \SetCell[r=1, c = 1]{l} {\cite{holling1973resilience} \\ \cite{gao2016universal} \\ \cite{pumpuni2017resilience} \\ \cite{krakovska2024resilience}} & \SetCell[r=1, c = 1]{l}{\cite{albert2000error} \\ \cite{bodin2009role} \\ \cite{gao2016universal} \\ \cite{pumpuni2017resilience}} & \SetCell[r=1, c = 1]{l} {\cite{anderies2004framework} \\ \cite{sundstrom2014transdisciplinary} \\ \cite{pumpuni2017resilience}} & \SetCell[r=1, c = 1]{bg = gray!50} & \SetCell[r=1, c = 1]{l} {\cite{ostrom1990governing} \\ \cite{lanzara1999transient} \\ \cite{folke2004regime} \\ \cite{weick2011managing}} & \SetCell[r=1, c = 1]{bg = gray!50} & \SetCell[r=1, c = 1]{l}{\cite{ostrom1990governing} \\ \cite{levin1998ecosystems} \\ \cite{gunderson2002panarchy} \\ \cite{walker2004resilience} \\ \cite{heinimann2017infrastructure}}\\
-\hline
-\SetCell[r=1,c=2]{l}{\textbf{\makecell{Engineering}}} & & \SetCell[r=1, c = 1]{l}{\cite{wiener1948cybernetics} \\ \cite{panteli2017metrics}} & \SetCell[r=1, c = 1]{l}{\cite{albert2000error} \\ \cite{gao2016universal}} & \SetCell[r=1, c = 1]{l}{\cite{bruneau2003framework} \\ \cite{francis2014metric} \\ \cite{panteli2017metrics}} & \SetCell[r=1, c = 1]{l}{\cite{rane2024artificial}} & \SetCell[r=1, c = 1]{l}{\cite{hollnagel2013resilience}} & \SetCell[r=1, c = 1]{bg = gray!50} & \SetCell[r=1, c = 1]{l}{\cite{holling1996engineering} \\ \cite{francis2014metric} \\ \cite{ivanov2022viable}} \\
-\hline
-\SetCell[r=1,c=2]{l}{\textbf{\makecell{Ecology \& Social Systems}}} & & \SetCell[r=1, c = 1]{l}{\cite{holling1973resilience} \\  \cite{hashimoto1982reliability} \\ \cite{ives1995measuring}} & \SetCell[r=1, c = 1]{l}{\cite{bodin2009role}} & \SetCell[r=1, c = 1]{l}{\cite{ives1995measuring} \\ \cite{sundstrom2014transdisciplinary}} & \SetCell[r=1, c = 1]{l}{\cite{maillart2024computational}} & \SetCell[r=1, c = 1]{l}{\cite{berkes2000linking} \\ \cite{lebel2006governance} \\ \cite{mahajan2022participatory}} & \SetCell[r=1, c = 1]{l}{\cite{maillart2024computational}} & \SetCell[r=1, c = 1]{l}{\cite{folke2010resilience} \\ \cite{leslie2013response}\\ \cite{francis2014metric} \\ \cite{allen2018quantifying}}\\
-\hline
-\SetCell[r=1,c=2]{l}{\textbf{\makecell{Climate Change \& Disaster Management}}} & & \SetCell[r=1, c = 1]{l}{\cite{dawson2011agentbased} \\ \cite{panteli2017metrics} \\ \cite{aydin2018integration}} & \SetCell[r=1, c = 1]{l}{\cite{jacobs2017applying} \\ \cite{aydin2018integration}} & \SetCell[r=1, c = 1]{l}{\cite{bruneau2003framework}} & \SetCell[r=1, c = 1]{l}{\cite{arnold2004informationsharing} \\ \cite{aerts2018integrating}} & \SetCell[r=1, c = 1]{l}{\cite{dawson2011agentbased} \\ \cite{mahajan2022participatory}} & \SetCell[r=1, c = 1]{l}{\cite{moreno2018womens}} & \SetCell[r=1, c = 1]{l}{\cite{alexander2013resilience} \\ \cite{meerow2016defining} \\ \cite{adger2005socialecological} \\ \cite{leichenko2024climate}}\\
-\hline
-\SetCell[r=1,c=2]{l}{\textbf{\makecell{Psychology \& Neuroscience}}} & & \SetCell[r=1, c = 1]{l}{\cite{manikis2019computational} \\ \cite{ungar2021modeling}} & \SetCell[r=1, c = 1]{bg = gray!50} & \SetCell[r=1, c = 1]{l}{\cite{mcewen2004protection} \\ \cite{rakesh2019resilience}} & \SetCell[r=1, c = 1]{l}{\cite{klein2008performing} \\ \cite{bada2019cyber} \\\cite{kalisch2024neurobiology}} & \SetCell[r=1, c = 1]{l}{\cite{bada2019cyber}} & \SetCell[r=1, c = 1]{l}{\cite{rutter1987psychosocial} \\ \cite{masten2010disasters}} & \SetCell[r=1, c = 1]{l}{\cite{wagnild1993development} \\ \cite{luthar2000construct} \\ \cite{campbell2007psychometric} \\ \cite{feder2019biology}}\\
-\hline
-\SetCell[r=1,c=2]{l}{\textbf{\makecell{Public Health}}} & & \SetCell[r=1, c = 1]{l}{\cite{brauer2008compartmental} \\ \cite{luke2012systems}}  & \SetCell[r=1, c = 1]{l}{\cite{luke2012systems}} & \SetCell[r=1, c = 1]{l}{\cite{cutter2010disaster} \\ \cite{kruk2017building}} & \SetCell[r=1, c = 1]{l}{\cite{arnold2004informationsharing}} & \SetCell[r=1, c = 1]{l}{\cite{barasa2018what} \\ \cite{haldane2021health}} & \SetCell[r=1, c = 1]{l}{\cite{gibbs2013beyond} \\ \cite{aase2020resilience}} & \SetCell[r=1, c = 1]{l}{\cite{norris2008community} \\ \cite{barasa2018what}}\\
-\hline
-\SetCell[r=2, c=1]{l}{\vspace{-16.25em}\par \textbf{Management}} & \SetCell[r=1, c=1]{l}{\textbf{Organizational}} & \SetCell[r=1, c = 1]{bg = red!20} & \SetCell[r=1, c = 1]{bg = red!20} & \SetCell[r=1, c = 1]{l}{\cite{kuypers2018designing}} & \SetCell[r=1, c = 1]{l}{\cite{klein2008performing} \\ \cite{bada2019cyber} \\ \cite{almeida2020challenges}} & \SetCell[r=1, c = 1]{l}{\cite{lanzara1999transient} \\ \cite{westrum2004typology} \\ \cite{weick2011managing} \\ \cite{henfridsson2013generative} \\ \cite{barasa2018what} \\ \cite{bada2019cyber} \\\cite{boh2023building}} & \SetCell[r=1, c = 1]{bg = gray!50} &  \SetCell[r=1, c = 1]{l}{ \cite{westrum2004typology}\\ \cite{teece2007explicating} \\ \cite{vogus2007organizational} \\ \cite{bhamra2011resilience} \\ \cite{burnard2011organisational} \\ \cite{lengnick2011developing} \\ \cite{boin2013resilient} \\ \cite{henfridsson2013generative} \\ \cite{skopik2016problem} \\ \cite{dupont2019cyberresilience} \\ \cite{barasa2018what} \\ \cite{duchek2020organizational} \\ \cite{calder2021iso} \\\cite{hepfer2022heterogeneity} \\ \cite{he2022building}}\\
-\cline[dashed]{2-9}
-&  \SetCell[r=1, c=1]{l}{\textbf{Risk \& Cyber}} & \SetCell[r=1, c = 1]{bg = red!20} & \SetCell[r=1, c = 1]{bg = orange!20}{\cite{gillard2023efficient}} & \SetCell[r=1, c = 1]{l}{\cite{linkov2013resilience} \\ \cite{panteli2017metrics}} & \SetCell[r=1, c = 1]{l}{\cite{aerts2018integrating} \\ \cite{almeida2020challenges}} & \SetCell[r=1, c = 1]{l}{\cite{lostri2022shared} \\ \cite{boh2023building}} & \SetCell[r=1, c = 1]{l}{\cite{kuypers2018designing}} & \SetCell[r=1, c = 1]{l}{\cite{baselcommittee2011basel} \\ \cite{bjorck2015cyber} \\ \cite{woods2015four} \\ \cite{skopik2016problem} \\ \cite{linkov2019fundamental} \\ \cite{dupont2019cyberresilience} \\  \cite{hausken2020cyber}  \\ \cite{calder2021iso} \\ \cite{lostri2022shared}} \\
+\textbf{Method} & \textbf{Infrastructural scope} & \textbf{Organizational scope} & \textbf{Ecosystem scope} \\
+\textbf{\makecell{Simulation \\ \& modelling}} &
+  {\cite{dawson2011agentbased} \\ \cite{gao2016universal} \\ \cite{krakovska2023resilience} \\ \cite{kwakkel2016comparing}} &
+  \SetCell{bg=orange!20} {\cite{helbing2012agent}} &
+  \SetCell{bg=orange!20} {\cite{aerts2018integrating}} \\
+\textbf{\makecell{Network \\ analysis}} &
+  {\cite{albert2000error} \\ \cite{panteli2017metrics}} &
+  \SetCell{bg=orange!20} {\cite{luke2012systems}} &
+  \SetCell{bg=orange!20} {\cite{liu2022network}} \\
+\textbf{\makecell{Trace-based \\ metrics \& \\ indicators}} &
+  {\cite{bruneau2003framework} \\ \cite{francis2014metric} \\ \cite{cutter2010disaster} \\ \cite{kuypers2018designing} \\ \cite{ives1995measuring} \\ \cite{hashimoto1982reliability}} &
+  {\cite{boh2023building} \\ \cite{hepfer2022heterogeneity} \\ \cite{barasa2018what} \\ \cite{kruk2017building}} &
+  \SetCell{bg=orange!20} {\cite{gillard2023efficient}} \\
+\textbf{\makecell{Case studies \\ \& surveys}} &
+  {\cite{holling1996engineering} \\ \cite{hutchins2011intelligence} \\ \cite{bilge2012before}} &
+  {\cite{weick2011managing} \\ \cite{vogus2007organizational} \\ \cite{bhamra2011resilience} \\ \cite{burnard2011organisational} \\ \cite{westrum2004typology} \\ \cite{hillmann2021organizational} \\ \cite{duchek2019organizational} \\ \cite{lengnick2011developing} \\ \cite{henfridsson2013generative} \\ \cite{almeida2020challenges} \\ \cite{haldane2021health} \\ \cite{ungar2021modeling} \\ \cite{rota2024}} &
+  {\cite{ostrom1990governing} \\ \cite{arnold2004informationsharing} \\ \cite{janssen2006network} \\ \cite{enisa2017isacs} \\ \cite{ivanov2022viable} \\ \cite{mermoud2019share}} \\
+\textbf{\makecell{Conceptual \\ \& integrative \\ frameworks}} &
+  {\cite{rankine1858manual} \\ \cite{wiener1948cybernetics} \\ \cite{holling1973resilience} \\ \cite{folke2010resilience} \\ \cite{gunderson2002panarchy} \\ \cite{walker2004resilience} \\ \cite{levin1998ecosystems} \\ \cite{linkov2013resilience} \\ \cite{paries2017resilience}} &
+  {\cite{simon1997administrative} \\ \cite{march1993organizations} \\ \cite{galbraith1973designing} \\ \cite{teece2007explicating} \\ \cite{woods2015four} \\ \cite{taleb2012antifragile} \\ \cite{sundstrom2014transdisciplinary}} &
+  {\cite{bjorck2015cyber} \\ \cite{dupont2019cyberresilience} \\ \cite{hausken2020cyber} \\ \cite{falco2019cyber} \\ \cite{meerow2016defining} \\ \cite{heinimann2017infrastructure}} \\
+\textbf{\makecell{Standards, \\ regulation \\ \& governance}} &
+  {\cite{nist2024csf} \\ \cite{boin2013resilient} \\ \cite{skopik2016problem} \\ \cite{lostri2022shared}} &
+  {\cite{calder2021iso} \\ \cite{bcbs2021operational} \\ \cite{nist2024csf} \\ \cite{ecb2018tiber} \\ \cite{power1999audit}} &
+  {\cite{bcbs2021operational} \\ \cite{european2022regulation} \\ \cite{SOCI2018} \\ \cite{ecb2018tiber} \\ \cite{ccrc2024chain}} \\
 \end{longtblr}
 \end{landscape}
 \end{center}

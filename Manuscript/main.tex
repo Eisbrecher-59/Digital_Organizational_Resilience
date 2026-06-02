@@ -1,102 +1,114 @@
-\documentclass[12pt]{article}
+\documentclass[12pt, letterpaper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc} % accepting different input for PDF
 
-% \usepackage{times}
+% Page Size and Margins
+\setlength{\topmargin}{-0.5in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9in}
+\setlength{\headheight}{15pt}
+
+% Font
+\usepackage{times} 
+
+% Footer
+\pagestyle{plain}
+
+% Math
 \usepackage{newtxtext,newtxmath}
-% \usepackage[document]{ragged2e}
-% \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{setspace}
+
+% References
 \usepackage{csquotes}
-\doublespacing
-% \let\oldtabular\tabular
-% \renewcommand{\tabular}{\setstretch{1}\oldtabular}
-\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=10mm]{geometry}
-\usepackage[backend=biber, style=apa]{biblatex}
-\usepackage{titlesec}
+\usepackage[style=apa,backend=biber]{biblatex}
+\addbibresource{references.bib}
+% Preserve source order of keys within a multi-citation (chronological),
+% overriding the apa style's default alphabetical sortcites.
+\ExecuteBibliographyOptions{sortcites=false}
 \usepackage{hyperref}
-\usepackage{indentfirst}
-\usepackage[skip = -25pt, indent=.5in]{parskip}
-\graphicspath{CiHB/img/} % image file
-\usepackage{pdfpages} % enabling input of pdf files by selecting specific pages
-\usepackage{soul,color}
-% \usepackage{longtable}
-% \usepackage{colortbl,multirow,hhline}
+
+% Table
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=10mm]{geometry}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+% \UseTblrLibrary{booktabs, color, longtblr, cell-span}
+% \usepackage[normalem]{ulem} % for multiple pages tables
+% \useunder{\uline}{\ul}{} % for multiple pages tables
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{setspace}
 \usepackage{tabularx}
 \usepackage{ltablex}
+\usepackage{pdfpages}
 \usepackage{pdflscape}
+\usepackage{soul,color}
 \usepackage{colortbl}
 \usepackage{rotating}
 \usepackage{tablefootnote}
-\usepackage{tabularray}
-% \DefTblrTemplate{firsthead,middlehead,lasthead}{default}{
-% }
-\DefTblrTemplate{firsthead}{default}{}
-\DefTblrTemplate{firstfoot}{default}{
-  \UseTblrTemplate{contfoot}{default}
-  \UseTblrTemplate{caption}{default}
-}
-\DefTblrTemplate{lastfoot}{default}{
-  \UseTblrTemplate{caption}{default}
-}
-% \DefTblrTemplate{middlefoot}{default}{
-%   \UseTblrTemplate{contfoot}{default}
-%   \UseTblrTemplate{capcont}{default}
-% }
-% \DefTblrTemplate{lastfoot}{default}{
-%   \UseTblrTemplate{note}{default}
-%   \UseTblrTemplate{remark}{default}
-%   \UseTblrTemplate{capcont}{default}
-% } 
-\UseTblrLibrary{booktabs, color, longtblr, cell-span}
-\usepackage[normalem]{ulem} % for multiple pages tables
-\useunder{\uline}{\ul}{} % for multiple pages tables
-\usepackage{siunitx}
-% \UseTblrLibrary{varwidth}
 \usepackage{changepage}
-\usepackage[normalem]{ulem} % for multiple pages tables
-\useunder{\uline}{\ul}{} % for multiple pages tables
 \usepackage{float} % enabling tables' placement to be manually determined
 % \usepackage{ragged2e}
 \usepackage{makecell}
 \setcellgapes{0pt}
 \usepackage{comment}
-\usepackage{tikz}
-\NeedsTeXFormat{LaTeX2e}
-\usepackage{venndiagram}[2018/06/07 v1.2 (NLCT) Venn diagrams]
 \usepackage{subcaption}
-\usetikzlibrary{backgrounds,positioning,calc,arrows.meta}
-\usepackage{booktabs,array}
 
-\RequirePackage{xkeyval}
-\RequirePackage{etoolbox}
-
+\DefTblrTemplate{firsthead}{default}{}
+\DefTblrTemplate{head}{default}{}
+\DefTblrTemplate{firstfoot}{default}{
+  \UseTblrTemplate{contfoot}{default}
+}
+\DefTblrTemplate{lastfoot}{default}{
+  \UseTblrTemplate{caption}{default}
+}
 
 \renewcommand\cellalign{tl}   % top-left alignment inside \makecell
 \renewcommand\theadalign{tl}  % top-left alignment for \thead if used
 
+% Tikz
 \usepackage{tikz}
+\usetikzlibrary{backgrounds,positioning,calc,arrows.meta,decorations.pathreplacing}
+\usepackage{booktabs,array}
+\RequirePackage{xkeyval}
+\RequirePackage{etoolbox}
+
 \newcommand{\Closed}{\tikz[baseline=-0.6ex]\fill(0,0) circle (0.6ex);} % filled
 \newcommand{\OpenClosed}{\tikz[baseline=-0.6ex]\fill[gray!50, draw=black](0,0) circle (0.6ex);} % gray
 \newcommand{\Open}{\tikz[baseline=-0.6ex]\draw(0,0) circle (0.6ex);} % empty
 
+\input{figures_and_tables/interview_respondents}
 
-% Title setup
-\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+% Line Spacing
+\renewcommand{\baselinestretch}{2.0}\normalsize
+
+% Redefine Heading Sizes
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\normalsize\bfseries\centering}}
+\renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
+                                      {-3.25ex \@plus -1ex \@minus -.2ex}%
+                                      {1.5ex \@plus .2ex}%
+                                      {\normalfont\normalsize\bfseries\centering}}
+\makeatother
+
+% Title
+\title{\textbf{Digital Organizational Resilience as a Socio-technical Capability}}
 
 % Bibliography style
 \addbibresource{references.bib}
-\addbibresource{references1.bib}
 
 \begin{document}
 
 % Title
-\title{Digital Organizational Resilience as a Socio-technical Capability}
+\title{Envisioning Quantitative Resilience in the Age of the Great Acceleration}
 
 \author{Sébastien Gillard \\
   Geneva School of Economics and Management, University of Geneva \\
@@ -119,16 +131,17 @@
 % Abstract
 \begin{abstract}
 \vspace*{4mm}
-Resilience has become a central concern in management and information systems as organizations confront increasingly complex digital disruptions. Despite its prominence in policy, standards, and organizational discourse, resilience often has remained highly rhetorical and little operational: Conceptual ambiguity, weak operationalization, and fragmented empirical evidence hinder the development of proper organizational foundations for resilience, which in turn hinders the deployment of actionable practices. This paper addresses these challenges through a structured, cross-disciplinary review of resilience research across management, information systems, and related fields. We identified three core limitations in the current understanding of digital resilience in organizations: weak construct clarity, insufficient indicators capable of capturing adaptive performance when disruptions occur, and limited accumulation and exploitation of evidence that would help measure resilience and act upon across organizational contexts. Here, we recognize that digital organizational resilience shall be an enacted socio-technical capability linking organizational routines, technological infrastructures, and ecosystem interactions. We further outline a research agenda that emphasizes early-warning systems, integrative design principles, measurable behavioral indicators, and the importance of combining field data and simulations. This study contributes to theory development and provides a foundation for developing observable and actionable forms of resilience in complex digital environments.
+Resilience has become a central concern for contemporary organizations facing technological disruption, cyber-threats, and systemic interdependence. Yet despite its prominence, organizational resilience remains conceptually fragmented, methodologically underdeveloped, and frequently enacted symbolically rather than operationally. This paper advances a research agenda for organizational resilience in digitally mediated environments, synthesizing insights from resilience theory and information systems scholarship. We argue that as organizational processes become embedded in digital infrastructures and ecosystems, resilience acquires a distinct sociotechnical specification. Identifying three critical gaps—conceptual ambiguity, empirical fragmentation across levels, and limited operationalization—we propose an enactment–scope framework that clarifies how resilience becomes enacted through observable mechanisms and distributed across organizational levels. Cyber resilience is examined as a high-pressure instantiation that renders the digitally structured nature of organizational resilience particularly visible. By anchoring resilience within the dynamics of digital infrastructures and governance arrangements, this paper positions information systems research at the forefront of resilience scholarship.
+
 \end{abstract}
 
 % Keywords
 \vspace{15pt}
-\noindent \textbf{Keywords:} Digital Organizational Resilience, socio-technical Systems, Organizational Adaptation, Digital Infrastructure, Resilience Measurement.
+\noindent \textbf{Keywords:} Resilience, Socio-technical Systems, Information Systems (IS), Organizational Adaptation, Modeling and Simulation, Digital Environments.
 
+% Introduction
 \newpage
 
-% Main sections
 \input{sections/1_introduction}
 \input{sections/2_background}
 \input{sections/3_research_gaps}
@@ -136,10 +149,13 @@ Resilience has become a central concern in management and information systems as
 \input{sections/5_research_directions}
 \input{sections/6_implications_for_research}
 \input{sections/7_conclusion}
+
+% Methodology, Results, Discussion, and Conclusion sections can be added here
+
 % References
 %\newpage
 \printbibliography
 
-\input{sections/12_appendices}
+\input{sections/9_appendices}
 
 \end{document}

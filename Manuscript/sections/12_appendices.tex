@@ -1,4 +1,5 @@
 \newpage
+<<<<<<< HEAD
 \appendix
 
 \renewcommand{\thefigure}{A.\arabic{figure}}
@@ -8,12 +9,25 @@
 
 \section{Foundational Constructs and Disciplinary Perspectives on Resilience}
 \label{appendix:A}
+=======
+\section*{APPENDIX}
+
+\renewcommand{\thesection}{\Alph{section}}
+\setcounter{section}{0}
+\renewcommand{\thefigure}{A.\arabic{figure}}
+\setcounter{figure}{0} % reset numbering
+
+\section{\MakeUppercase {Foundational Constructs and Disciplinary Perspectives on Resilience}}
+\label{appendix:A}
+\renewcommand{\baselinestretch}{2.0}\normalsize
+>>>>>>> 5962c492beeeeff7385c8b177888710a79b39489
 
 This appendix supplements the background section by detailing key theoretical perspectives that have shaped resilience thinking across disciplines. Each subsection identifies the core logic, constructs, and limitations associated with a given paradigm, and highlights their implications for organizational implementation.
 
 \subsection{Mechanical and Homeostatic Origins}
 \label{appendix:A1}
 
+<<<<<<< HEAD
 Resilience, a scientific concept born in the 17th century, initially referred to the rebound of solid bodies or the echo of sound. Over time, it evolved to encompass broader scientific and systemic interpretations, particularly in biology and engineering \autocite{alexander2013resilience}. In its early sense, resilience described a material's ability to recover its original form after a force was applied, like a spring returning to shape after being compressed. This notion aligns closely with homeostasis, a principle central to biological and engineering systems in the 20th century. Homeostasis describes a system's ability to maintain a stable internal state in the face of external changes, typically through feedback loops. The human body, for example, maintains a constant temperature through sweating or shivering \autocite{wiener1948cybernetics}. Here, resilience is defined by the ability to return to a fixed, desirable state after small perturbations. Early analytical approaches to resilience focused on stability and return, the idea that a resilient system could recover to its original equilibrium after being disturbed. In engineering, resilience was formalized through performance-based criteria. A widely adopted framework defines resilience as the speed of recovery from failure, complementing reliability (the frequency of successful performance) and vulnerability (the severity of failure) \autocite{hashimoto1982reliability}. These three criteria form a foundational model for evaluating system performance under stress, particularly in water resource and infrastructure domains. These three criteria form a core framework for assessing system behavior under stress, particularly in water resource and infrastructure domains. In mathematical modeling, this is often represented using differential equations such as $\frac{dx}{dt} = f(x,t)$, where the equilibrium point $x^*$ satisfies $f(x^*,t) = 0$ \autocite{strogatz2018nonlinear}. If a system perturbed from $x^*$ eventually returns to it, it is considered stable and by early definitions, resilient. A simple example is a swinging pendulum that returns to its resting point. This kind of behavior is also at the heart of classical control theory, which emerged to design systems that resist disturbances through corrective action. A system governed by $\frac{dx}{dt} = Ax + Bu$ can be stabilized using a control input like $u = -Kx$ to guide it back to equilibrium \autocite{astrom2021feedback}. This is how a self-balancing robot stays upright when nudged—by continually correcting its position based on feedback. Materials science defines resilience by how much energy a material can absorb within the elastic region before deforming permanently. This is quantified by the modulus of resilience: $U_R = \frac{\sigma_y^2}{2E}$, where $\sigma_y$ is the yield stress and $E$ is the Young’s modulus \autocite{callister2020materials}. Materials like spring steel exhibit high resilience, demonstrating the concept's applicability across disciplines, from engineering to materials science, where the ability to absorb energy and recover is crucial.\\
 
 While these approaches are powerful, they assume systems are designed to stay the same: disturbances are temporary, structure is fixed, and return to a baseline is both possible and desirable. As a result, mechanical models risk mistaking system stability for adaptive capacity -- reinforcing symbolic notions of resilience without enabling transformation.
@@ -21,6 +35,15 @@ While these approaches are powerful, they assume systems are designed to stay th
 \subsection{Shifting Toward Adaptive Capacity}
 \label{appendix:A2}
 As our understanding of nature and society evolved so did the limitations of this view. Many systems -- ecological, technological, economic, and public health systems -- don’t merely rebound. They adapt. They transform \autocite{folke2010resilience}. They face nonlinear changes, irreversible shifts, and strategic interactions \autocite{gunderson2002panarchy}. A forest recovering after a wildfire may not return to its previous state; it may reorganize into a different but still functional ecosystem \autocite{walker2004resilience}. A supply chain disrupted by a pandemic may adapt by diversifying suppliers rather than returning to the previous model \autocite{ivanov2022viable}. Similarly, health systems recovering from crises such as pandemics must not only restore functionality but build capacity for future stressors by integrating local knowledge, equitable access, and preventive strategies \autocite{norris2008community, kruk2017building}. This recognition marked a conceptual shift in resilience thinking -- from homeostasis to adaptive capacity \autocite{folke2004regime}. Instead of assuming a fixed point of stability, newer approaches emphasized how systems persist through change, including transformation \autocite{walker2004resilience}. This shift also led to stochastic models that quantify resilience under random disturbances using return variance and autocorrelation \autocite{ives1995measuring}. In social-ecological contexts, this includes the ability of communities and ecosystems to co-adapt, as in coastal regions where human and environmental systems jointly manage flood risk through hybrid solutions like restored wetlands and elevated infrastructure \autocite{adger2005socialecological}.\\
+=======
+Resilience, a scientific concept born in the 17th century, initially referred to the rebound of solid bodies or the echo of sound. Over time, it evolved to encompass broader scientific and systemic interpretations, particularly in biology and engineering \autocite{alexander2013resilience}. In its early sense, resilience described a material's ability to recover its original form after a force was applied, like a spring returning to shape after being compressed. This notion aligns closely with homeostasis, a principle central to biological and engineering systems in the 20th century. Homeostasis describes a system's ability to maintain a stable internal state in the face of external changes, typically through feedback loops. The human body, for example, maintains a constant temperature through sweating or shivering \autocite{wiener1948cybernetics}. Here, resilience is defined by the ability to return to a fixed, desirable state after small perturbations. Early analytical approaches to resilience focused on stability and return, the idea that a resilient system could recover to its original equilibrium after being disturbed. In engineering, resilience was formalized through performance-based criteria. A widely adopted framework defines resilience as the speed of recovery from failure, complementing reliability (the frequency of successful performance) and vulnerability (the severity of failure) \autocite{hashimoto1982reliability}. These three criteria form a foundational model for evaluating system performance under stress, particularly in water resource and infrastructure domains. These three criteria form a core framework for assessing system behavior under stress, particularly in water resource and infrastructure domains. In mathematical modeling, this is often represented using differential equations such as $\frac{dx}{dt} = f(x,t)$, where the equilibrium point $x^*$ satisfies $f(x^*,t) = 0$ \autocite{strogatz2018nonlinear}. If a system perturbed from $x^*$ eventually returns to it, it is considered stable and by early definitions, resilient. A simple example is a swinging pendulum that returns to its resting point. This kind of behavior is also at the heart of classical control theory, which emerged to design systems that resist disturbances through corrective action. A system governed by $\frac{dx}{dt} = Ax + Bu$ can be stabilized using a control input like $u = -Kx$ to guide it back to equilibrium \autocite{astrom2008feedback}. This is how a self-balancing robot stays upright when nudged—by continually correcting its position based on feedback. Materials science defines resilience by how much energy a material can absorb within the elastic region before deforming permanently. This is quantified by the modulus of resilience: $U_R = \frac{\sigma_y^2}{2E}$, where $\sigma_y$ is the yield stress and $E$ is the Young’s modulus \autocite{callister2020materials}. Materials like spring steel exhibit high resilience, demonstrating the concept's applicability across disciplines, from engineering to materials science, where the ability to absorb energy and recover is crucial.\\
+
+While these approaches are powerful, they assume systems are designed to stay the same: disturbances are temporary, structure is fixed, and return to a baseline is both possible and desirable. Their domain of validity is therefore narrower than the contemporary organizational settings in which resilience is now invoked, where stability and adaptive capacity are not equivalent and transformation is itself sometimes the goal.
+
+\subsection{Shifting Toward Adaptive Capacity}
+\label{appendix:A2}
+As our understanding of nature and society evolved so did the limitations of this view. Many systems -- ecological, technological, economic, and public health systems -- don’t merely rebound. They adapt. They transform \autocite{folke2010resilience}. They face nonlinear changes, irreversible shifts, and strategic interactions \autocite{gunderson2002panarchy}. A forest recovering after a wildfire may not return to its previous state; it may reorganize into a different but still functional ecosystem \autocite{walker2004resilience}. A supply chain disrupted by a pandemic may adapt by diversifying suppliers rather than returning to the previous model \autocite{ivanov2022viable}. Similarly, health systems recovering from crises such as pandemics must not only restore functionality but build capacity for future stressors by integrating local knowledge, equitable access, and preventive strategies \autocite{norris2007community,kruk2017building}. This recognition marked a conceptual shift in resilience thinking -- from homeostasis to adaptive capacity \autocite{folke2004regime}. Instead of assuming a fixed point of stability, newer approaches emphasized how systems persist through change, including transformation \autocite{walker2004resilience}. This shift also led to stochastic models that quantify resilience under random disturbances using return variance and autocorrelation \autocite{ives1995measuring}. In social-ecological contexts, this includes the ability of communities and ecosystems to co-adapt, as in coastal regions where human and environmental systems jointly manage flood risk through hybrid solutions like restored wetlands and elevated infrastructure \autocite{adger2005socialecological}.\\
+>>>>>>> 5962c492beeeeff7385c8b177888710a79b39489
 
 Unlike mechanical approaches, these perspectives treat change as inevitable and often desirable -- framing resilience not as returning to normal, but as reorganizing in ways that enable persistence under new conditions.
 
@@ -29,8 +52,13 @@ Unlike mechanical approaches, these perspectives treat change as inevitable and 
 
 Ecological systems, for example, may exhibit multiple equilibria. A shallow lake might shift from clear to turbid due to nutrient overload and fail to recover even when nutrient levels decline -- a dynamic that early models could not capture \autocite{holling1973resilience}. Resilience in this context is the system’s capacity to absorb disturbance without shifting into an undesirable regime. Mathematical approaches evolved accordingly. However, dynamic and strategic perspectives often emerge from different disciplinary traditions, each with its own underlying definition of resilience. Such variation has motivated the creation of integrative typologies that map these competing interpretations and highlight the need for both context-specific operationalization and effective application \autocite{meerow2016defining}.\\
 
+<<<<<<< HEAD
 In network theory, the focus is not on a specific equilibrium but on maintaining core functionality amid partial failure. The Giant Component in a network ensures global connectivity. Its persistence depends on the average node degree $\langle k \rangle$ exceeding a critical threshold $p_c = 1/\langle k \rangle$ \autocite{newman2018networks}. This is crucial for systems like power grids, where a network’s ability to transmit electricity depends on keeping critical nodes connected even during outages \autocite{peng2015invulnerability}. In ecology, network analysis has been used to model flows of energy and resources, assess systemic robustness, and identify critical structural dependencies, offering methodological parallels for resilience assessment in socio-technical systems \autocite{luke2012systems}. In probabilistic models, resilience is expressed in terms of survival and reliability over time. The survival function $S(t) = \mathcal{P}(T > t) = 1 - F(t)$ indicates the probability that a component or system survives beyond time $t$ \autocite{walpole1998probability}. This perspective is essential in contexts like infrastructure and public health, where resilience involves withstanding and recovering from rare, high-impact events. For example, community resilience in public health relies on shared social capital, redundancy in care delivery, and early-warning information systems \autocite{aldrich2015social, haldane2021health}. As systems became more interconnected and dynamic, resilience analysis incorporated anticipation, adaptation, and decision-making under uncertainty. Formal system-level metrics have also been proposed to capture recovery dynamics and basin stability in complex systems \autocite{krakovska2024resilience}. In modern control systems, such as model predictive control (MPC), a system forecasts future conditions and adjusts its behavior proactively \autocite{almassalkhi2015modelpredictive}. A microgrid using MPC can reroute energy to maintain voltage and frequency even during external shocks. Strategic behavior also emerged in game-theoretic models, which describe resilience as the result of interactions among rational agents. A cyber-physical system under threat may use game-theoretic reasoning to adaptively defend itself, optimizing control strategies in real time while anticipating potential attacks \autocite{zhu2015game, myerson2013game}. Likewise, adaptive governance in climate resilience incorporates participatory approaches and local feedback to design flexible policy mechanisms \autocite{lebel2006governance}. Social-ecological perspectives in dynamic contexts highlight the role of institutional configurations and governance structures in shaping resilience trajectories \autocite{anderies2004framework, adger2005socialecological}.\\
 While these models offer a more realistic foundation for understanding resilience in dynamic environments, they remain difficult to institutionalize. Their complexity often leads to partial or symbolic uptake, where tools are adopted but underlying decision logics are not embedded in organizational routines or governance structures. In many cases, these difficulties are compounded by the trade-offs inherent in resilience planning, where choices about priorities and beneficiaries are shaped by political and social contexts, often constraining the feasibility and scope of resilience measures \autocite{leichenko2024climate}.
+=======
+In network theory, the focus is not on a specific equilibrium but on maintaining core functionality amid partial failure. The Giant Component in a network ensures global connectivity. Its persistence depends on the average node degree $\langle k \rangle$ exceeding a critical threshold $p_c = 1/\langle k \rangle$ \autocite{newman2018networks}. This is crucial for systems like power grids, where a network’s ability to transmit electricity depends on keeping critical nodes connected even during outages \autocite{peng2015invulnerability}. In ecology, network analysis has been used to model flows of energy and resources, assess systemic robustness, and identify critical structural dependencies, offering methodological parallels for resilience assessment in socio-technical systems \autocite{luke2012systems}. In probabilistic models, resilience is expressed in terms of survival and reliability over time. The survival function $S(t) = \mathcal{P}(T > t) = 1 - F(t)$ indicates the probability that a component or system survives beyond time $t$ \autocite{walpole1998probability}. This perspective is essential in contexts like infrastructure and public health, where resilience involves withstanding and recovering from rare, high-impact events. For example, community resilience in public health relies on shared social capital, redundancy in care delivery, and early-warning information systems \autocite{aldrich2014social,haldane2021health}. As systems became more interconnected and dynamic, resilience analysis incorporated anticipation, adaptation, and decision-making under uncertainty. Formal system-level metrics have also been proposed to capture recovery dynamics and basin stability in complex systems \autocite{krakovska2023resilience}. In modern control systems, such as model predictive control (MPC), a system forecasts future conditions and adjusts its behavior proactively \autocite{almassalkhi2015modelpredictive}. A microgrid using MPC can reroute energy to maintain voltage and frequency even during external shocks. Strategic behavior also emerged in game-theoretic models, which describe resilience as the result of interactions among rational agents. A cyber-physical system under threat may use game-theoretic reasoning to adaptively defend itself, optimizing control strategies in real time while anticipating potential attacks \autocite{myerson2013game,zhu2015game}. Likewise, adaptive governance in climate resilience incorporates participatory approaches and local feedback to design flexible policy mechanisms \autocite{lebel2006governance}. Social-ecological perspectives in dynamic contexts highlight the role of institutional configurations and governance structures in shaping resilience trajectories \autocite{anderies2004framework,adger2005socialecological}.\\
+While these models offer a more realistic foundation for understanding resilience in dynamic environments, their institutional uptake is still maturing. Their analytical complexity often means that tools are adopted before underlying decision logics are fully embedded in organizational routines or governance structures, leaving room for further work on integration. These efforts also intersect with the trade-offs inherent in resilience planning, where choices about priorities and beneficiaries are shaped by political and social contexts that condition the feasibility and scope of resilience measures \autocite{leichenko2024climate}.
+>>>>>>> 5962c492beeeeff7385c8b177888710a79b39489
 
 \subsection{Emergence, Complexity, and Transformation}
 \label{appendix:A4}
@@ -45,6 +73,7 @@ Resilience thinking reaches its most sophisticated form when it embraces transfo
 \vspace{0.3cm}
 
 
+<<<<<<< HEAD
 where $x$ and $y$ are prey and predator populations, respectively \autocite{wangersky1978lotka}. Evolutionary game theory explores resilience through evolving strategies under shifting conditions. A strategy $s^*$ is evolutionarily stable if $u(s^*, s^*) > u(s', s^*)$ for all $s' \neq s^*$, indicating resistance to invasion by alternatives \autocite{ostrom1990governing, gunderson2002panarchy}.  These logics emphasize resilience not as resistance, but as the capacity to evolve in response to disruption.\\
 
 Agent-based modeling (ABM) enables the simulation of how local interactions among agents give rise to large-scale patterns of resilience. Each agent’s state $s_i(t+1) = f(s_i(t), s_j(t), E)$ evolves based on neighboring agents and environmental conditions \autocite{helbing2012agent}. ABMs are increasingly applied to organizational contexts, including simulations of decentralized coordination in disaster response, cybersecurity incidents, and interdependent infrastructures. A system is considered resilient if $\lim_{t \rightarrow \infty} s_i(t) \rightarrow S$ for all agents.\\
@@ -53,21 +82,44 @@ These approaches demonstrate that resilience emerges from systems composed of in
 $\langle x(t) \rangle \sim \langle x_{\textrm{eq}} \rangle + \Delta x_0 e^{-\gamma t}$ where $\gamma$ reflects the speed of stabilization \autocite{marconi2008fluctuation, pelorosso2017low}.\\
 
 These models highlight that resilience cannot be engineered solely through top-down design—it must be cultivated through distributed adaptation, making it inherently difficult to capture using traditional control-based frameworks. This highlights a persistent disconnect: while resilience is invoked rhetorically, few systems are designed to self-organize or evolve under pressure.
+=======
+where $x$ and $y$ are prey and predator populations, respectively \autocite{wangersky1978lotka}. Evolutionary game theory explores resilience through evolving strategies under shifting conditions. A strategy $s^*$ is evolutionarily stable if $u(s^*, s^*) > u(s', s^*)$ for all $s' \neq s^*$, indicating resistance to invasion by alternatives \autocite{ostrom1990governing,gunderson2002panarchy}.  These logics emphasize resilience not as resistance, but as the capacity to evolve in response to disruption.\\
+
+Agent-based modeling (ABM) enables the simulation of how local interactions among agents give rise to large-scale patterns of resilience. Each agent’s state $s_i(t+1) = f(s_i(t), s_j(t), E)$ evolves based on neighboring agents and environmental conditions \autocite{helbing2012agent}. ABMs are increasingly applied to organizational contexts, including simulations of decentralized coordination in disaster response, cybersecurity incidents, and interdependent infrastructures. A system is considered resilient if $\lim_{t \rightarrow \infty} s_i(t) \rightarrow S$ for all agents.\\
+
+These approaches demonstrate that resilience emerges from systems composed of interacting, adaptive elements. Feedback mechanisms, redundancy, and cooperation allow complex adaptive systems to reorganize and sustain functionality after disruptions \autocite{gao2016universal,krakovska2023resilience}. In thermodynamics and statistical mechanics, resilience is associated with conditions for stability $\frac{\delta^2\Phi}{\delta x^2} \geq 0$ and dynamic recovery:
+$\langle x(t) \rangle \sim \langle x_{\textrm{eq}} \rangle + \Delta x_0 e^{-\gamma t}$ where $\gamma$ reflects the speed of stabilization \autocite{marconi2008fluctuation,pelorosso2017low}.\\
+
+These models highlight that resilience is not produced by top-down design alone---it is also cultivated through distributed adaptation, which extends what traditional control-based frameworks were originally built to capture. The opportunity, then, is to develop frameworks and tools that better support self-organization and evolution under pressure, complementing the strong design principles already in use. A further conceptual extension, articulated by \textcite{taleb2012antifragile}, identifies an \emph{antifragile} regime in which systems do not merely tolerate variability but gain structurally from it. Convex exposure to stressors, option-bearing redundancy, and learning loops that compound across incidents are the mechanisms typically associated with this regime. In organizational settings, the antifragile case suggests that some forms of controlled stress---red-team exercises, voluntary failure injection, post-incident reconfiguration---may strengthen adaptive capacity rather than only validate existing controls, provided learning is durably institutionalized.
+>>>>>>> 5962c492beeeeff7385c8b177888710a79b39489
 
 \subsection{Psychological and Neurobiological Dimensions}
 \label{appendix:A5}
 
+<<<<<<< HEAD
 Beyond ecological and technological systems, resilience has deep roots in the life sciences, particularly in psychology and neuroscience. In psychology, resilience describes an individual’s capacity to adapt positively in the face of adversity. Research beginning with wartime family studies \autocite{hill1949families} and later expanded by Antonovsky on trauma and meaning \autocite{antonovsky1971twentyfive} laid the foundation for modern understandings of psychological resilience. Studies of at-risk children \autocite{werner1995resilience} demonstrated that personal traits and supportive environments jointly foster positive adaptation. Resilience is now seen as a dynamic, developmental process shaped by interactions between individual traits and external protective factors \autocite{rutter1987psychosocial, ungar2021modeling}. Supportive social structures, belief systems, and relational bonds contribute to adaptive responses across the lifespan \autocite{walsh1996concept, masten2010disasters}. This capacity is not fixed but can evolve through experience and support. Recent multisystemic perspectives expand this view by emphasizing that resilience is not only psychological but also shaped by the interaction of social, institutional, and environmental systems \autocite{ungar2021modeling}. In neuroscience, resilience correlates with efficient stress regulation, particularly involving the prefrontal cortex, amygdala, and hippocampus \autocite{kalisch2024neurobiology}. The hypothalamic-pituitary-adrenal (HPA) axis modulates cortisol responses, and resilient individuals exhibit more rapid recovery from stress \autocite{mcewen2004protection}. Epigenetic studies suggest that life experiences can influence the expression of resilience-related genes \autocite{rakesh2019resilience}. Cognitive strategies such as reappraisal affect neural circuitry involved in emotional regulation, linking psychological and neurobiological perspectives. Advances in computational modeling and network analysis are helping to map these pathways and predict resilience outcomes \autocite{manikis2019computational}. Standardized tools have helped operationalize psychological resilience. The Wagnild and Young Resilience Scale emphasizes traits like perseverance and self-reliance, while the refined 10-item Connor–Davidson Resilience Scale focuses on adaptability and emotional regulation \autocite{wagnild1993development, campbell2007psychometric}. Digital technologies, including mobile assessments and machine learning, now complement traditional tools by enabling personalized monitoring and intervention \autocite{kleitman2022applying}.\\
 \\
 Despite its centrality to adaptive behavior under stress, psychological resilience is rarely integrated into organizational resilience frameworks -- particularly in domains like cybersecurity, where human cognition and affective regulation are critical to situational judgment. As a result, even when individual resilience is assessed or encouraged, it is often decoupled from systemic support structures, reinforcing a symbolic approach to resilience rather than embedding it in collective practice. Organizational resilience requires not only resilient individuals, but the structural and cultural scaffolding that supports cognitive and emotional adaptation under pressure.\\
+=======
+Beyond ecological and technological systems, resilience has deep roots in the life sciences, particularly in psychology and neuroscience. In psychology, resilience describes an individual’s capacity to adapt positively in the face of adversity. Research beginning with wartime family studies \autocite{hill1949families} and later expanded by Antonovsky on trauma and meaning \autocite{antonovsky1971twentyfive} laid the foundation for modern understandings of psychological resilience. Studies of at-risk children \autocite{werner1995resilience} demonstrated that personal traits and supportive environments jointly foster positive adaptation. Resilience is now seen as a dynamic, developmental process shaped by interactions between individual traits and external protective factors \autocite{rutter1987psychosocial,ungar2021modeling}. Supportive social structures, belief systems, and relational bonds contribute to adaptive responses across the lifespan \autocite{walsh1996concept,masten2010disasters}. This capacity is not fixed but can evolve through experience and support. Recent multisystemic perspectives expand this view by emphasizing that resilience is not only psychological but also shaped by the interaction of social, institutional, and environmental systems \autocite{ungar2021modeling}. In neuroscience, resilience correlates with efficient stress regulation, particularly involving the prefrontal cortex, amygdala, and hippocampus \autocite{kalisch2024neurobiology}. The hypothalamic-pituitary-adrenal (HPA) axis modulates cortisol responses, and resilient individuals exhibit more rapid recovery from stress \autocite{mcewen2004protection}. Epigenetic studies suggest that life experiences can influence the expression of resilience-related genes \autocite{rakesh2019resilience}. Cognitive strategies such as reappraisal affect neural circuitry involved in emotional regulation, linking psychological and neurobiological perspectives. Advances in computational modeling and network analysis are helping to map these pathways and predict resilience outcomes \autocite{manikis2019computational}. Standardized tools have helped operationalize psychological resilience. The Wagnild and Young Resilience Scale emphasizes traits like perseverance and self-reliance, while the refined 10-item Connor–Davidson Resilience Scale focuses on adaptability and emotional regulation \autocite{wagnild1993development,campbell2007psychometric}. Digital technologies, including mobile assessments and machine learning, now complement traditional tools by enabling personalized monitoring and intervention \autocite{kleitman2022applying}.\\
+\\
+Despite its centrality to adaptive behavior under stress, psychological resilience has so far been only partially integrated into organizational resilience frameworks—particularly in domains like cybersecurity, where human cognition and affective regulation are critical to situational judgment. Where individual resilience is assessed or encouraged, the next step is to connect it more tightly to systemic support structures, so that adaptive capacity is sustained across individual and collective levels. Organizational resilience benefits both from resilient individuals and from the structural and cultural scaffolding that supports cognitive and emotional adaptation under pressure.\\
+>>>>>>> 5962c492beeeeff7385c8b177888710a79b39489
 \\
 This human-centered view of resilience emphasizes the interplay between cognitive, emotional, social, and physiological dimensions. It adds an important layer to the understanding of resilience as not only systemic or ecological, but also deeply embodied and experiential.
 
 
+<<<<<<< HEAD
 \section{Systematic Literature Review Process}
 \label{appendix:B}
 
 This review followed established guidelines for structured literature reviews in Information Systems and management research \autocite{webster2002analyzing, vomBrocke2009, vombrocke2015standing}. The objective was to identify how resilience has been theorized, measured, and operationalized across disciplines, and to classify contributions according to topic and methodological approach. To ensure legitimacy, the process was evaluated along five criteria: coverage, rigor, synthesis quality, reliability, and conceptual validation.  
+=======
+\section{\MakeUppercase {Systematic Literature Review Process}}
+\label{appendix:B}
+
+This review followed established guidelines for structured literature reviews in Information Systems and management research \autocite{webster2002analyzing,vomBrocke2009,vombrocke2015standing}. The objective was to identify how resilience has been theorized, measured, and operationalized across disciplines, and to classify contributions according to topic and methodological approach. To ensure legitimacy, the process was evaluated along five criteria: coverage, rigor, synthesis quality, reliability, and conceptual validation.  
+>>>>>>> 5962c492beeeeff7385c8b177888710a79b39489
 
 \subsection{Search and Selection}
 
@@ -75,9 +127,15 @@ The initial search was conducted primarily on Google Scholar, which provided bro
 \\
 We began with the general keyword \textit{resilience} and progressively refined searches by combining it with disciplinary terms (e.g., hospital, community, complex adaptive systems) and methodological terms (e.g., graph theory, pandemic, Connor–Davidson Resilience Scale). To ensure \textbf{coverage}, backward and forward citation searches were performed on highly cited and seminal works (e.g., \cite{holling1973resilience}; \cite{boh2023building}).\\  
 \\
+<<<<<<< HEAD
 This process yielded approximately 340 records. Following scope refinement, 200 were excluded as overrepresentative or irrelevant for not meeting the inclusion criteria (e.g., purely technical, ecological without transferability, or rhetorical use), leaving 120 full-text articles for detailed eligibility assessment (see Figure \ref{fig:Heatmap}). Of these, 89 were identified as \textbf{core references} and 30 as \textbf{peripheral references}. \textbf{Saturation} was observed: in the final 30 screened articles, no new conceptual categories emerged. These were largely theoretical or normative surveys, which were already well represented in the corpus.\\
 \\
 Inclusion criteria required that a study (1) explicitly address resilience, and (2) contribute to management, organizational, or operational perspectives (conceptual or empirical). Purely technical papers (e.g., infrastructure reliability models without organizational connection) or rhetorical uses of resilience without substantive analysis were excluded. Screening decisions were first made by the first author and subsequently cross-checked with co-authors, ensuring consistency and enhancing \textbf{reliability}.
+=======
+This process yielded approximately 340 records. Following scope refinement, 200 were excluded as overrepresentative or as not meeting the inclusion criteria (e.g., purely technical, ecological without transferability, or non-substantive use of the term), leaving 120 full-text articles for detailed eligibility assessment (see Figure \ref{fig:Heatmap}). Of these, 89 were identified as \textbf{core references} and 30 as \textbf{peripheral references}. \textbf{Saturation} was observed: in the final 30 screened articles, no new conceptual categories emerged. These were largely theoretical or normative surveys, which were already well represented in the corpus.\\
+\\
+Inclusion criteria required that a study (1) explicitly address resilience, and (2) contribute to management, organizational, or operational perspectives (conceptual or empirical). Purely technical papers (e.g., infrastructure reliability models without organizational connection) or studies that mention resilience without substantive analysis of it were excluded. Screening decisions were first made by the first author and subsequently cross-checked with co-authors, ensuring consistency and enhancing \textbf{reliability}.
+>>>>>>> 5962c492beeeeff7385c8b177888710a79b39489
 
 \subsection{Classification}
 
@@ -94,7 +152,13 @@ Papers could be coded into multiple categories when they combined disciplinary p
 
 Figure \ref{fig:Heatmap} presents a heatmap of the distribution of the 340 reviewed publications across topic–approach categories. The visualization demonstrates an asymmetry: simulation, network, and metrics-based approaches dominate in technical disciplines (e.g., engineering, ecology), while management, organizational, and cyber resilience research rely heavily on case studies, surveys, and qualitative descriptions. This pattern provided the empirical basis for identifying gaps.\\  
 \\
+<<<<<<< HEAD
 Topic–approach intersections were coded according to their degree of coverage: gray cells denote areas excluded from scope; orange cells indicate limited coverage (few publications); and red cells mark empty categories (no identified studies). These criteria were defined during the review process and applied consistently. Importantly, the subsequent Table \ref{tab:ResearchGaps} in the main text emerged directly from these coded intersections, demonstrating \textbf{conceptual validation} rather than post-hoc interpretation. 
+=======
+Topic–approach intersections were coded according to their degree of coverage: gray cells denote areas excluded from scope; orange cells indicate limited coverage (few publications); and red cells mark empty categories (no identified studies). These criteria were defined during the review process and applied consistently. The discipline-by-method classification produced through this coding is preserved as Table~\ref{tab:ResearchGapsLegacy} below; the analytical version used in the main text (Table~\ref{tab:ResearchGaps}, Section~\ref{sec:RG}) reorganizes the same evidence along method × coordination-scope axes to align with the Enactment--Scope framework.
+
+\input{figures_and_tables/RG2_legacy}
+>>>>>>> 5962c492beeeeff7385c8b177888710a79b39489
 
 \begin{figure}[h!]
     \centering
@@ -121,6 +185,7 @@ In line with \cite{webster2002analyzing} and \cite{vombrocke2015standing}, the r
 
 Together, these elements legitimate the review as systematic, replicable, and conceptually robust.
 
+<<<<<<< HEAD
 \section{Empirical Insights from Field Study}
 \label{appendix:C}
 
@@ -172,3 +237,179 @@ Two concrete practices illustrate these dynamics. First, most organizations adop
 
 \subsection{Summary}
 These empirical insights demonstrate how organizations invoke resilience under regulatory and managerial pressure while struggling to embed it as an adaptive capability. They reveal six paradoxes that structure the resilience implementation gap. Table \ref{tab:RotaResult} in the Section \ref{sec:Introduction} synthesizes these findings by aligning the themes with their organizational dimensions and implications for practice.
+=======
+\section{\MakeUppercase {Empirical Insights from Field Study}}
+\label{appendix:C}
+
+\subsection{Study design and provenance}
+
+To complement the literature review, we draw on empirical material collected in Lorena Rota's Master's thesis (MAS Information Security, University of Geneva, 2024), conducted under the supervision of Thomas Maillart \autocite{rota2024}. Rota is a co-author of this manuscript, ensuring continuity between the thesis research and the present review. The thesis is not publicly available; this appendix therefore documents the study design, interview protocol, thematic synthesis, and principal conclusions needed to evaluate the field evidence cited in the main text.\\
+\\
+The study employed a qualitative, exploratory design to examine how organizations interpret, govern, and operationalize cyber operational resilience amid evolving regulatory requirements (DORA, NIS2, FINMA operational-resilience guidance, and related frameworks). Its primary aim was to analyze how organizations balance regulatory compliance with the development of authentic operational cyber resilience, and how internal information on past cyber problems is---or is not---used as a lever for strengthening resilience.\\
+\\
+The fieldwork comprised 18 semi-structured interviews with senior cybersecurity and risk professionals, each representing a distinct organization \autocite{rota2024}. Interviews were conducted in English. Participants were recruited for direct responsibility over resilience programs, cyber-risk management, or information-security governance. Aggregated sample characteristics are summarized in Table~\ref{tab:RotaSample}; no individual or organization is named in this review.
+
+\input{figures_and_tables/RotaSample}
+
+\subsection{Research questions and hypotheses}
+
+The thesis investigated how a predominant orientation toward external factors---regulatory frameworks, standards, and cyber threats---relative to internal resources and experience shapes operational cyber resilience strategies in Swiss and international organizations in 2024, and how this orientation varies by sector. Five sub-questions guided the analysis:
+\begin{enumerate}
+    \item To what extent do organizations prioritize external information (regulatory frameworks, industry standards, threats) over analysis of their own internal experiences when designing operational cyber resilience strategies?
+    \item How do the indirect effects of regulation, including through cybersecurity professionals' prior experience, influence operational resilience practices in directly and indirectly regulated organizations?
+    \item What are the limits of an externally oriented approach to operational cyber resilience, and how does it affect adaptation to organization-specific threats?
+    \item How do technology-sector organizations differ from other sectors in their use of internal data for operational cyber resilience?
+    \item To what extent does cooperation across organizational units influence the effectiveness of operational cyber resilience strategies?
+\end{enumerate}
+
+Five hypotheses were tested exploratively:
+\begin{enumerate}
+    \item Financial-sector organizations under strict regulatory oversight show heightened engagement in operational cyber resilience initiatives, reflected in greater board attention and larger compliance-oriented budgets.
+    \item A gap persists between organizations' definitions of operational cyber resilience and those of authorities such as the BIS and FINMA, manifesting as partial definitions, perceptions of rigidity, and neglect of internal environmental factors.
+    \item Most organizations prioritize regulatory compliance and standards over deep analysis of their own cyber resilience posture, under-exploiting lessons from past incidents.
+    \item Even resource-rich organizations struggle to establish a shared understanding of operational cyber resilience and effective cross-departmental collaboration, with siloed structures producing passive, distant management.
+    \item Organizations with closer cross-departmental cooperation demonstrate stronger operational resilience than those maintaining siloed structures.
+\end{enumerate}
+
+The BIS definition of operational resilience was communicated to all participants before interviews as the shared reference point: the ability to deliver critical operations through disruption by identifying and protecting against threats, responding and adapting, recovering, and learning from disruptive events while assuming disruptions will occur \autocite{bcbs2021operational,rota2024}.
+
+\subsection{Methodology}
+
+\subsubsection{Design and sampling}
+
+The study used qualitative semi-structured interviews because they allow open-ended exploration of complex, multidimensional organizational perceptions \autocite{rota2024}. Participants were selected through purposive expert sampling: inclusion required a senior role with direct accountability for cybersecurity governance, operational resilience, or cyber-risk management in an organization operating in Switzerland and/or internationally. Organizations spanned finance, insurance, IT security, professional services, logistics, hospitality, luxury goods, pharma/medtech, and telecommunications, with size ranging from small firms to organizations exceeding 100{,}000 employees. One interviewee represented two organizations; one organization was represented by two interviewees (aggregated in Table~\ref{tab:RotaSample}). No organization or individual is identified here.
+
+\subsubsection{Data collection and ethics}
+
+All participants provided written informed consent; participation was voluntary and withdrawal was permitted at any time. Interviews were conducted face-to-face, online, or in person according to participant availability. With consent, interviews were recorded; where recording was not authorized, notes were taken directly during the session. Identities of individuals and organizations were anonymized; transcripts were stored securely with access restricted to the student researcher and academic supervisor. Data were used solely for academic assessment. Original data were scheduled for secure disposal after thesis assessment (by March 2025), in accordance with UNIGE ethics and privacy guidelines \autocite{rota2024}. Participants could review and comment on the manuscript prior to publication. Quotations reported below are illustrative English paraphrases drawn from the thematic synthesis; they are not attributed to named individuals and do not reproduce verbatim transcript material.
+
+\subsubsection{Analysis procedure}
+
+The research protocol followed six steps \autocite{rota2024}:
+\begin{enumerate}
+    \item \textbf{Definition of objectives:} Align interview objectives with the research questions and theoretical framework.
+    \item \textbf{Selection of participants:} Apply inclusion criteria to identify relevant experts across sectors and organization sizes.
+    \item \textbf{Preparation and invitations:} Develop the interview protocol, obtain informed consent, and ensure secure data management.
+    \item \textbf{Conduct of interviews:} Use validated probing techniques during semi-structured interviews; record with consent or transcribe directly where recording was not authorized.
+    \item \textbf{Data analysis:} Apply Braun and Clarke's systematic thematic analysis \autocite{braun2019thematic}. No qualitative software was used; manual coding was chosen to remain close to the data. Responses to the 19 interview questions were synthesized by cross-cutting themes rather than reported question-by-question.
+    \item \textbf{Conclusions and implications:} Link findings explicitly to raw data, and discuss study limitations and avenues for further research.
+\end{enumerate}
+
+\subsection{Interview protocol}
+
+The English-language interview guide comprised 19 questions organized around BIS operational-resilience terminology. Terms and definitions (operational resilience, cyber resilience strategy, governance, organizational arrangements, testing, continuous improvement) were provided to participants in advance. The questions grouped into four domains:
+\begin{itemize}
+    \item[(a)] \textbf{Definition and interpretation (Q1--3):} awareness of operational-resilience guidance; familiarity with NIST CSF, ISO/IEC~27001, COBIT, and sector-specific requirements; perceptions of compliance with strict legal requirements versus high-level principles (e.g., DORA versus BIS or FINMA principles).
+    \item[(b)] \textbf{Strategy and governance (Q4--10):} existence and communication of a cyber resilience strategy (CRS) with business objectives translated for operational teams; cyber-resilience leadership bodies; internal role and responsibility frameworks; trade-offs between security (CIA) and operational continuity during crises (including COVID-19); third-party/vendor risk controls; alignment of internal arrangements with CRS objectives.
+    \item[(c)] \textbf{Emerging technology and reporting (Q11--12):} adaptation of resilience strategy to AI and quantum technologies; reporting lines to leadership and board, including automated dashboards and follow-on decisions.
+    \item[(d)] \textbf{Testing, learning, and measurement (Q13--19):} security testing and exercises; leadership review of test results; systematic review of internal and external cyber events; ISAC participation; forward-looking and predictive capabilities; periodic review of SOC ticket history; determination of ticketing data fields; automated case-handling suggestions and workforce optimization from historical ticket data.
+\end{itemize}
+
+The full question list is reproduced below for replicability:
+\begin{enumerate}
+    \item Organization categorization (sector, size, regulatory context).
+    \item Awareness of and familiarity with cyber operational-resilience guidance; use of other frameworks in internal documentation.
+    \item Perceived differences between strict legal compliance and high-level principles; implementation strategies, challenges, and experiences.
+    \item Existence of a CRS with business objectives translated into internal arrangements for operational teams.
+    \item Whether the CRS was issued and communicated by leadership; whether internal documentation was updated accordingly.
+    \item Existence of a cyber-resilience leadership board; topics discussed and follow-up actions for operational teams.
+    \item Internal framework defining roles and responsibilities from identification through recovery and learning, including delegated crisis authority.
+    \item Trade-offs between security (CIA) and operational continuity during recent crises (including COVID-19) and their impact on operational cyber resilience.
+    \item Adjustments to controls and measures in response to third-party/vendor risks.
+    \item Whether cyber-resilience arrangements include objectives aligned with the CRS.
+    \item Adaptation of the resilience strategy to AI and quantum technologies amid rapid technological change.
+    \item Reporting lines (automated or manual) to leadership and typical decisions that follow.
+    \item Types of security tests conducted (vulnerability assessments, penetration testing, scenario-based exercises).
+    \item How leadership reviews test results and adapts strategy, arrangements, and governance.
+    \item Capabilities to systematically review internal and external cyber events; use of events to develop scenarios; ISAC participation and follow-up actions.
+    \item Forward-looking capabilities to preempt or anticipate future threats, risks, and crisis scenarios; participating roles.
+    \item Periodic review of SOC ticket history (workforce and technologies involved); use of reports to optimize workforce.
+    \item Who determines information gathered through the ticketing system; changes over time and reasons.
+    \item Whether ticketing systems suggest case handling from historical data, coordinate across departments, or identify workforce over-/under-utilization.
+\end{enumerate}
+
+\subsection{Results}
+
+\subsubsection{Six themes for the literature review}
+
+Analysis revealed six recurrent themes, synthesized in Table~\ref{tab:RotaResult} (Section~\ref{sec:Introduction}). Below we summarize supporting evidence from the field study \autocite{rota2024}.
+
+\begin{itemize}
+    \item \textbf{Quantification and Ambiguity.} Organizations invoked resilience across committees and reporting lines, yet struggled to define operational metrics. KPI and dashboard projects were often multi-year and under-resourced relative to board expectations. A recurring pattern was that \textit{``\QuoteQuantAmb{}''}
+    
+    \item \textbf{Regulatory Pressure and Compliance-Centered Practice.} Regulatory audits and operational-resilience requirements (DORA, NIS2, FINMA circulars) structured practice. Several interviewees described resilience investment as oriented toward maintaining a ``license to operate.'' Across the sample, \textit{``\QuoteCompliance{}''}
+    
+    \item \textbf{Coordination and Silos.} IT, risk, and compliance units often operated with limited cross-functional integration, especially outside incident conditions. Interviewees noted that \textit{``\QuoteSilos{}''}
+    
+    \item \textbf{Learning from Incidents.} Post-incident reviews and crisis experience were acknowledged as important, yet organizations often prioritized external frameworks over institutionalizing lessons from their own events. The synthesis highlighted that \textit{``\QuoteLearning{}''}
+    
+    \item \textbf{Human and Cultural Factors.} Expertise, training, and organizational culture mattered, but interpretations varied across units. \textit{``\QuoteHuman{}''} Interviewees also noted that \textit{``\QuoteCyberRange{}''}
+    
+    \item \textbf{Flexibility--Precision Paradox.} Regulators and frameworks provide flexible, principle-based definitions; boards and investment committees nonetheless request precise, auditable indicators. A common tension was that \textit{``\QuoteFlexPrec{}''}
+\end{itemize}
+
+Three additional patterns from the thesis synthesis extend these themes and are especially relevant to digital organizational resilience:
+\begin{itemize}
+    \item \textbf{Selective framework adoption.} NIST CSF and ISO/IEC~27001 were the most frequently cited frameworks, followed by COBIT; organizations typically adapted and combined them rather than applying any single standard rigidly. Emerging frameworks (DORA, NIS2, FINMA circulars) were also cited, especially in regulated sectors \autocite{rota2024}.
+    \item \textbf{Governance integration over dedicated structures.} Most firms integrated resilience into existing governance bodies rather than creating dedicated committees---a cost-conscious choice that could dilute accountability and slow perspective change \autocite{rota2024}.
+    \item \textbf{Emergent SOC-based indicators.} Several organizations experimented with SOC ticket histories as proxies for resilience-related activity, yet analysis practices varied widely and rarely connected to workforce optimization or board-level evaluation. Interviewees reported that \textit{``\QuoteSoc{}''}
+\end{itemize}
+
+\subsubsection{Detailed findings by topic}
+
+The thematic synthesis organized responses to all 19 questions into the following topic areas \autocite{rota2024}:
+
+\paragraph{Framework awareness and adoption.}
+Most organizations were familiar with multiple operational-resilience directives. NIST CSF, ISO/IEC~27001, and COBIT were most frequently cited; newer instruments (DORA, NIS2, FINMA circulars) appeared mainly in regulated sectors. Organizations combined and adapted frameworks rather than applying any single standard rigidly, reflecting a view that resilience requires context-specific design rather than checklist compliance alone.
+
+\paragraph{Regulatory implementation.}
+Organizations navigated a mixed landscape of principles and legal requirements. Three recurring implementation challenges overlapped: (i) \emph{resource allocation}---balancing compliance investment against other operational priorities, with boards more readily approving regulatory than non-regulatory resilience spend; (ii) \emph{interpretation}---understanding and correctly applying often ambiguous requirements, with particular difficulty comparing detailed EU regulations (e.g., DORA) to less prescriptive Swiss law; and (iii) \emph{strategic alignment}---harmonizing compliance with commercial objectives. Organizations reported continuous partial revision of internal processes as new regulations (AI Act, Cyber Resilience Act, NIS2) entered force. Some framed compliance investments as strategic, client-trust-building initiatives rather than purely defensive cost.
+
+\paragraph{Cyber resilience strategies.}
+Organizations were transitioning from traditional business continuity and risk management toward broader cyber-resilience postures, driven by regulation and threat evolution. A persistent strategy--operations gap was reported: baseline metrics for boards were sought but multi-year KPI projects often stalled for lack of process-improvement budget; harmonized testing protocols aligned to resilience metrics remained aspirational. Human factors were widely emphasized as foundational. Board engagement varied from regular cyber-resilience attention to ongoing efforts to elevate the topic strategically. Cross-department operationalization remained difficult without clear mandates from leadership.
+
+\paragraph{Governance, roles, and reporting.}
+Resilience responsibilities were typically folded into existing governance structures rather than new dedicated committees, motivated by budget and efficiency considerations but raising questions about specialized expertise versus decision speed. Role-definition projects progressed at varying pace; new dedicated posts were rare---existing roles absorbed new responsibilities. Clear decision authority in crises was recognized as essential but unevenly implemented. Regulated industries (especially finance) reported more structured processes. External partnerships supported continuous monitoring and incident response where internal capacity was limited. Reporting lines to leadership and boards were generally established, with growing use of automated dashboards; however, KPI definition remained difficult because of data quality, system diversity, and uncertain board information needs. Upward reporting was often stronger than constructive downward feedback; crisis reporting used dedicated channels. Test results presented to boards were frequently filtered through CISO perception of committee priorities and tended to emphasize critical issues only.
+
+\paragraph{Testing, exercises, and learning.}
+Testing practices were diverse: penetration tests, automated vulnerability scanning, crisis simulations, table-top exercises, phishing simulations, red-team exercises, bug-bounty programs, and security-by-design integration in software development. Realistic scenario simulation and employee awareness testing were widely valued. Leadership review of test outcomes varied from structured KPI-driven processes to ad-hoc examination; budget constraints often limited follow-through. Many organizations participated in ISACs and engaged national cyber-security centers; threat-intelligence platforms supplemented internal review. Systematic use of internal incident history to develop scenarios was uneven. External sharing was stronger in finance than in less networked sectors.
+
+\paragraph{Crisis experience and third-party risk.}
+COVID-19 and other crises exposed variable preparedness. Some organizations accelerated digital transformation while revealing continuity-plan gaps; others temporarily prioritized availability over strict confidentiality controls, accompanied by formal risk-acceptance procedures. Third-party risk management intensified with new regulatory outsourcing requirements: tiered vendor classification, stronger questionnaires and certifications, direct audits, contract updates with audit rights, joint exercises with critical suppliers, and dedicated third-party risk teams---alongside administrative burden, especially for smaller vendors.
+
+\paragraph{Emerging technology and prospective capabilities.}
+AI integration in products and security operations was active but governed cautiously; quantum computing was recognized as a future concern (chiefly for cryptography) but rarely resourced today. AI-enabled threats drove employee training emphasis. Prospective threat analysis drew on emerging technology monitoring, geopolitical considerations, supply-chain risk, and external intelligence partnerships, but dedicated teams and budgets were uncommon; immediate operational concerns often competed with long-term planning.
+
+\paragraph{Internal data and SOC ticket analysis.}
+Analysis of internal cyber data---including SOC ticket histories---was recognized as potentially valuable but generally under-prioritized relative to compliance. Few organizations systematically reviewed ticket history for workforce optimization; data-quality problems, immature processes, siloed SOC ownership, and heterogeneous systems were common barriers. Ticketing field definitions were often vendor-default or hierarchically determined rather than resilience-driven. Automated case suggestions and cross-department coordination from historical data were largely absent; manual runbooks and predefined procedures predominated. Technology and security-service providers showed greater willingness to invest in advanced analytics. Experts rarely perceived SOC analytics as board-level priorities and seldom requested dedicated budgets, though KPI development for board communication was underway in some organizations.
+
+\subsection{Principal conclusions from the field study}
+
+The thesis synthesis yielded four principal conclusions relevant to this review \autocite{rota2024}:
+\begin{enumerate}
+    \item \textbf{Definition gap.} Practitioners' understanding of operational cyber resilience often diverged from the holistic BIS definition communicated to them, producing partial conceptualizations and uneven operationalization across units.
+    \item \textbf{Regulation as catalyst, compliance as default.} Expanding regulation since the 2008 financial crisis has catalyzed resilience initiatives, but implementation often follows checklist and gap-assessment methods oriented toward literal compliance rather than adaptive capability. Regulatory expansion absorbs resources that might otherwise improve processes or analyze internal posture.
+    \item \textbf{External orientation over internal learning.} Organizations prioritized external frameworks, standards, and threat intelligence over systematic exploitation of their own incident and operational data, limiting organization-specific adaptation despite accumulating internal knowledge.
+    \item \textbf{Cooperation as enabler.} Cross-departmental cooperation---rather than siloed, hierarchical structures---appeared central to translating strategy into operational resilience, yet governance integration into existing bodies and absent leadership mandates often impeded such cooperation.
+\end{enumerate}
+
+\subsection{Limitations}
+
+The field study has limitations that bound interpretation of the evidence cited in this review \autocite{rota2024}:
+\begin{itemize}
+    \item \textbf{Sample size and design.} Eighteen purposively sampled expert interviews provide rich contextual insight but do not support statistical generalization.
+    \item \textbf{Geographic and sector mix.} Although Swiss and international organizations across multiple sectors were included, findings may not transfer uniformly to other regulatory environments or smaller enterprises under-represented in the sample.
+    \item \textbf{Interpretive synthesis.} Thematic analysis involved researcher judgment; manual coding without inter-coder reliability statistics introduces interpretive subjectivity, mitigated by supervisor oversight and explicit linkage of themes to interview content.
+    \item \textbf{Temporal context.} Interviews were conducted in 2024 amid rapid regulatory change (DORA, NIS2, CRA); organizational responses may evolve as implementation matures.
+    \item \textbf{Compliance framing.} Both the regulatory context and parts of the interview protocol emphasized compliance and governance, which may have accentuated externally oriented responses relative to internal learning practices.
+\end{itemize}
+
+\subsection{Summary}
+
+These insights show how organizations engage with resilience under regulatory and managerial pressure---and where enactment as adaptive capability still stalls. They surface six recurring tensions that structure the implementation gap analyzed in Section~\ref{sec:RG}. Table~\ref{tab:RotaResult} aligns each theme with its organizational dimension and practical implication. Because the underlying thesis is not publicly available, this appendix provides the methodological and empirical documentation needed to assess all field-study citations in the main text.
+
+\newpage
+\section*{REFERENCES (APPENDICES)}
+\renewcommand{\baselinestretch}{1.0}\normalsize
+\printbibliography[heading=none,keyword=appendix-only]
+>>>>>>> 5962c492beeeeff7385c8b177888710a79b39489

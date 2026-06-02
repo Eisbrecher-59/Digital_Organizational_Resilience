@@ -1,0 +1,70 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[>=Stealth, line width=0.9pt, font=\footnotesize]
+
+% ---- axes ----
+\draw[->,gray!60] (0,0) -- (13.2,0) node[above left=1pt and 0pt,black]{time};
+\draw[->,gray!60] (0,0) -- (0,5.2) node[above,black,align=center]{adaptive\\capacity};
+
+% ---- disruptions: live incidents (red) and simulated probes (audit / red-team, gray) ----
+% D1 probe (x=3), D2 incident (x=5.2), D3 probe (x=7.4)
+\foreach \x in {3,5.2,7.4} { \draw[gray!35,dotted] (\x,0.1) -- (\x,4.7); }
+\node[gray!75,font=\scriptsize,align=center] at (3,-0.45)   {audit /\\red-team};
+\node[red!70!black,font=\scriptsize,align=center] at (5.2,-0.45) {live\\incident};
+\node[gray!75,font=\scriptsize,align=center] at (7.4,-0.45) {red-team};
+\node[gray!85,font=\scriptsize] at (3,4.95) {\scriptsize(simulated disruption)};
+
+% disruption markers on the axis
+\node[gray!75] at (3,0.0)   {\scriptsize$\triangledown$};
+\node[red!70!black] at (5.2,0.0) {\scriptsize$\blacktriangledown$};
+\node[gray!75] at (7.4,0.0) {\scriptsize$\triangledown$};
+
+% ---- trajectories: all dip at every disruption (real OR simulated); recovery differs ----
+% green: monitoring + systematic learning -> each shock converted into a net gain
+\draw[green!55!black]
+  (1.8,3)--(3,3)--(3.2,2.3)--(4.0,3.5)--(5.2,3.5)--(5.4,2.8)--(6.2,4.0)--(7.4,4.0)--(7.6,3.3)--(8.4,4.6)--(9.6,4.75);
+% blue: responds to every probe and incident, recovers to baseline, learns nothing lasting
+\draw[blue!45!black]
+  (1.8,3)--(3,3)--(3.2,2.3)--(4.0,3.0)--(5.2,3.0)--(5.4,2.3)--(6.2,3.0)--(7.4,3.0)--(7.6,2.3)--(8.4,3.0)--(9.6,3.0);
+% red: no learning loop -> each shock leaves less capacity than before
+\draw[red!75!black]
+  (1.8,3)--(3,3)--(3.2,2.3)--(4.0,2.6)--(5.2,2.6)--(5.4,1.9)--(6.2,2.3)--(7.4,2.3)--(7.6,1.6)--(8.4,1.9)--(9.6,1.6);
+
+% ---- mechanism annotations on the curves ----
+\node[green!50!black,font=\scriptsize,align=center] at (6.0,4.75) {monitor + learn:\\each probe/incident\\becomes a gain};
+\draw[green!50!black,->] (6.0,4.45) to[bend right=10] (5.7,3.95);
+\node[red!65!black,font=\scriptsize,align=center] at (6.55,1.25) {no learning loop:\\lessons lost,\\capacity erodes};
+\draw[red!65!black,->] (6.55,1.55) to[bend left=10] (6.1,2.25);
+
+% ---- endpoint labels (outcome): all recover, but to different levels ----
+\node[green!55!black,right,font=\scriptsize,align=left] at (9.6,4.75) {recovers\\\emph{stronger}};
+\node[blue!45!black,right,font=\scriptsize,align=left]  at (9.6,3.0)  {recovers to\\baseline};
+\node[red!75!black,right,font=\scriptsize,align=left]   at (9.6,1.6)  {recovers\\\emph{weaker}};
+
+% ---- early ambiguity note ----
+\node[align=center,font=\scriptsize] at (1.05,1.5)
+  {one probe is\\ambiguous: all three\\dip and recover\\alike at first};
+\draw[->,gray] (1.05,2.15) -- (2.55,2.92);
+
+% ---- brace: longitudinal window ----
+\draw[decorate,decoration={brace,amplitude=5pt,mirror},gray!70]
+  (2.6,-1.05) -- (9.5,-1.05)
+  node[midway,below=4pt,black,font=\scriptsize]
+  {longitudinal tracing across disruptions: divergence becomes observable};
+
+\end{tikzpicture}
+\caption{\textbf{Monitoring and systematic learning are what separate the
+trajectories.} Disruptions are both real (live incidents) and simulated
+(audits, certifications, red-team exercises); all are probes that every
+organization dips under and recovers from, so any single probe is ambiguous.
+All three \emph{recover} after each disruption; what differs is the level they
+recover to. Where monitoring feeds a systematic post-incident learning loop,
+each shock is converted into a net gain and the organization recovers
+\emph{stronger} (an antifragile path); where it responds but institutionalizes
+nothing, it recovers only \emph{to baseline} (engineering-style robustness, no net
+change); and where no learning loop exists, lessons are lost and it recovers
+\emph{weaker}, growing progressively more brittle. Only tracing the loop across
+successive disruptions makes the difference---and thus resilience versus luck,
+capability versus compliance---observable.}
+\label{fig:trace_vs_snapshot}
+\end{figure}
