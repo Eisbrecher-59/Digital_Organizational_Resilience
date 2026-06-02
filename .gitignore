@@ -1,4 +1,5 @@
-cat <<EOF > .gitignore
+cat <<EOF > 
+.gitignore
 *.aux
 *.log
 *.out
@@ -8,4 +9,15 @@ cat <<EOF > .gitignore
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+/Submission
 EOF
+
+# Overleaf Connect
+.overleafconnect
+*.pdf
+*.nav
+*.snm
+*.vrb
+*.lot
+*.lof
+%OUTDIR%/
